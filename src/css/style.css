@@ -109,6 +109,9 @@ body {
   width: 48px;
 }
 /*----------------------block-1--------------------*/
+.block-1 {
+  margin-bottom: 600px;
+}
 .block-1 h1 {
   margin-top: calc(calc(1vh + 1vh)*20);
   font-size: calc(calc(1vh + 1vh)*6);
@@ -125,7 +128,7 @@ body {
 }
 .block-1 .images {
   position: absolute;
-  top: -70%;
+  top: 40%;
   display: flex;
   width: 100%;
   justify-content: space-between;
