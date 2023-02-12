@@ -20,6 +20,14 @@ body {
   background-color: #101922;
   overflow-x: hidden;
 }
+@keyframes animCTA {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /*----------------Меню----------------*/
 .container {
   max-width: 1600px;
@@ -117,7 +125,7 @@ body {
 }
 .block-1 .images {
   position: absolute;
-  top: -80%;
+  top: -70%;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -142,4 +150,35 @@ body {
   font-family: HelveticaL;
   font-weight: 100;
   font-size: 20px;
+  font-size: calc(calc(1vh + 1vh)*1.1);
+}
+.block-1 .offer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.block-1 .cta {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: calc(calc(1vh + 1vh)*-5);
+  z-index: 1;
+}
+.block-1 .cta:hover span {
+  color: #FF4612;
+  border-bottom: 1px solid #FF4612;
+}
+.block-1 .cta span {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: HelveticaL;
+  font-size: 20px;
+  padding: 5px 0;
+  border-bottom: 1px solid #FFFFFF;
+  transition: all 0.3s ease;
+}
+.block-1 .cta svg {
+  animation: animCTA 10s infinite linear;
 }

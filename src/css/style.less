@@ -49,6 +49,15 @@ body{
     overflow-x: hidden;
 }
 
+@keyframes animCTA {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
 
 
 
@@ -160,7 +169,7 @@ body{
     }
     .images{
         position: absolute;
-        top: -80%;
+        top: -70%;
         display: flex;
         width: 100%;
         justify-content: space-between;
@@ -183,10 +192,42 @@ body{
                 .hel();
                 font-weight: 100;
                 font-size: 20px;
+                font-size: calc(@index*1.1);
             }
             img{
 
             }
         }
+    }
+    .offer{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .cta{
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        margin-top: calc(@index*-5);
+        z-index: 1;
+        &:hover span{
+            color: @color-orange;
+            border-bottom: 1px solid @color-orange;
+        }
+        span{
+            color: @color-white;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            .hel();
+            font-size: 20px;
+            padding: 5px 0;
+            border-bottom: 1px solid @color-white;
+            transition: all 0.3s ease;
+        }
+        svg{
+            animation: animCTA 10s infinite linear;
+        }
+
     }
 }
