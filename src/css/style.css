@@ -5,12 +5,12 @@
 }
 /*---------------------Переменные-----------------------*/
 @font-face {
-  font-family: Playfair-regular;
-  src: url('fonts/playfair-regular.woff');
+  font-family: playfair_reg;
+  src: url('fonts/PlayfairDisplay-Regular.woff');
 }
 @font-face {
-  font-family: Playfair-italic;
-  src: url('fonts/playfair-italic.woff');
+  font-family: playfair_it;
+  src: url('fonts/PlayfairDisplay-Italic.woff');
 }
 @font-face {
   font-family: HelveticaL;
@@ -18,11 +18,13 @@
 }
 body {
   background-color: #101922;
+  overflow-x: hidden;
 }
 /*----------------Меню----------------*/
 .container {
   max-width: 1600px;
   margin: calc(calc(1vh + 1vh)*2) auto;
+  position: relative;
 }
 @media (max-width: 1599px) {
   .container {
@@ -100,10 +102,44 @@ body {
 }
 /*----------------------block-1--------------------*/
 .block-1 h1 {
-  font-size: 120px;
+  margin-top: calc(calc(1vh + 1vh)*20);
+  font-size: calc(calc(1vh + 1vh)*6);
   width: min-content;
   line-height: 0.99;
-  font-family: Playfair-regular;
+  font-family: playfair_reg;
   font-weight: 100;
   text-transform: uppercase;
+  color: #FFFFFF;
+}
+.block-1 h1 span {
+  font-family: playfair_it;
+  color: #FF4612;
+}
+.block-1 .images {
+  position: absolute;
+  top: -80%;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.block-1 .images .image {
+  display: flex;
+  width: calc(calc(1vh + 1vh)*13.3);
+  flex-direction: column;
+  gap: 20px;
+}
+.block-1 .images .image:nth-last-child(3) {
+  width: calc(calc(1vh + 1vh)*8.6);
+}
+.block-1 .images .image:nth-last-child(2) {
+  width: calc(calc(1vh + 1vh)*16.6);
+}
+.block-1 .images .image:nth-last-child(1) {
+  width: calc(calc(1vh + 1vh)*13.6);
+}
+.block-1 .images .image p {
+  color: #FFFFFF;
+  font-family: HelveticaL;
+  font-weight: 100;
+  font-size: 20px;
 }

@@ -18,12 +18,15 @@
 
 
 @font-face {
-    font-family: Playfair-regular;
-    src: url('fonts/playfair-regular.woff');
+    font-family: playfair_reg;
+    src: url('fonts/PlayfairDisplay-Regular.woff');
+
 }
+
 @font-face {
-    font-family: Playfair-italic;
-    src: url('fonts/playfair-italic.woff');
+    font-family: playfair_it;
+    src: url('fonts/PlayfairDisplay-Italic.woff');
+
 }
 
 @font-face {
@@ -31,10 +34,10 @@
     src: url('fonts/HelveticaLight.woff');
 }
 .play(){
-    font-family: Playfair-regular;
+    font-family: playfair_reg;
 }
 .playit(){
-    font-family: Playfair-italic;
+    font-family: playfair_it;
 }
 .hel(){
     font-family: HelveticaL;
@@ -43,6 +46,7 @@
 
 body{
     background-color: @color-black;
+    overflow-x: hidden;
 }
 
 
@@ -55,6 +59,7 @@ body{
 .container{
     max-width: 1600px;
     margin: calc(@index*2) auto;
+    position: relative;
     @media(max-width:1599px){
         padding: 0 calc(@index*2);
     }
@@ -139,11 +144,49 @@ body{
 
 .block-1{
     h1{
-        font-size: 120px;
+        margin-top: calc(@index*20);
+        //font-size: 120px;
+        font-size: calc(@index*6);
         width: min-content;
         line-height: .99;
         .play();
         font-weight: 100;
         text-transform: uppercase;
+        color: @color-white;
+        span{
+            .playit();
+            color: @color-orange;
+        }
+    }
+    .images{
+        position: absolute;
+        top: -80%;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .image{
+            display: flex;
+            width: calc(@index*13.3);
+            flex-direction: column;
+            gap: 20px;
+            &:nth-last-child(3){
+                width: calc(@index*8.6);
+            }
+            &:nth-last-child(2){
+                width: calc(@index*16.6);
+            }
+            &:nth-last-child(1){
+                width: calc(@index*13.6);
+            }
+            p{
+                color: @color-white;
+                .hel();
+                font-weight: 100;
+                font-size: 20px;
+            }
+            img{
+
+            }
+        }
     }
 }
