@@ -1,3 +1,109 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*---------------------Переменные-----------------------*/
+@font-face {
+  font-family: Playfair-regular;
+  src: url('fonts/playfair-regular.woff');
+}
+@font-face {
+  font-family: Playfair-italic;
+  src: url('fonts/playfair-italic.woff');
+}
+@font-face {
+  font-family: HelveticaL;
+  src: url('fonts/HelveticaLight.woff');
+}
+body {
+  background-color: #101922;
+}
+/*----------------Меню----------------*/
+.container {
+  max-width: 1600px;
+  margin: calc(calc(1vh + 1vh)*2) auto;
+}
+@media (max-width: 1599px) {
+  .container {
+    padding: 0 calc(calc(1vh + 1vh)*2);
+  }
+}
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav .logo {
+  width: calc(calc(1vh + 1vh)*14);
+}
+@media (max-width: 459px) {
+  .header nav .logo {
+    width: calc(calc(1vh + 1vh)*8);
+  }
+}
+.header nav .burger {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+}
+.header nav .burger input {
+  display: block;
+  width: 48px;
+  height: 35px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 2;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none;
+}
+.header nav .burger input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-20px, -17px);
+  width: 48px;
+}
+.header nav .burger input:checked ~ span:nth-last-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+  width: 48px;
+}
+.header nav .burger input:checked ~ span:nth-last-child(3) {
+  opacity: 1;
+  width: 48px;
+  transform: rotate(-45deg) translate(-20px, 17px);
+}
+.header nav .burger:hover span:nth-last-child(2) {
+  width: 48px;
+}
+.header nav .burger:hover span {
+  width: 48px;
+}
+.header nav .burger span {
+  display: block;
+  width: 14px;
+  height: 2px;
+  margin-bottom: 8px;
+  position: relative;
+  background: #cdcdcd;
+  transition: 0.3s ease;
+  transform-origin: 0% 0%;
+}
+.header nav .burger span:nth-last-child(2) {
+  width: 28px;
+  transform-origin: 0% 100%;
+}
+.header nav .burger span:nth-last-child(3) {
+  width: 48px;
+}
+/*----------------------block-1--------------------*/
+.block-1 h1 {
+  font-size: 120px;
+  width: min-content;
+  line-height: 0.99;
+  font-family: Playfair-regular;
+  font-weight: 100;
+  text-transform: uppercase;
 }

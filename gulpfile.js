@@ -117,4 +117,4 @@ watch('src/resourses/**', resourses);
 watch('src/fonts/*.woff', fonts);
 watch('src/img/icons/*.ico', ico);
 
-exports.default = series(clean, styles, htmlMinify, svgSprites, images, resourses, fonts, ico, watchFile);
+exports.default = series(clean, styles, htmlMinify, scripts, svgSprites, images, resourses, fonts, ico, watchFile);
