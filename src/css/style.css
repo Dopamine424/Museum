@@ -179,6 +179,10 @@ body {
   border-bottom: 1px solid #FFFFFF;
   transition: all 0.3s ease;
 }
-.block-1 .cta svg {
+.block-1 .cta .svgs .bukCTA {
   animation: animCTA 10s infinite linear;
+}
+.block-1 .cta .svgs .arrowCTA {
+  position: absolute;
+  animation: none !important;
 }

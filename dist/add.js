@@ -1,1 +1,1 @@
-"use strict";
+"use strict";gsap.registerPlugin(ScrollTrigger);
