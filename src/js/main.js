@@ -57,4 +57,24 @@ $(document).ready(function() {
 });
 
 
+$(document).ready(function() {
+    $('.collections').mouseover(function(event){
+        $('.ul2').css('opacity','1');
+        $('.ul2').css('pointer-events','auto');
+    });
+
+    $('.musems').mouseover(function(event){
+        $('.ul2').css('opacity','0');
+        $('.ul2').css('pointer-events','none');
+    });
+
+    // $('.musems').mouseout(function(event){
+    //     $('.ul2').css('opacity','0');
+    //     $('.ul2').css('pointer-events','none');
+    // });
+});
+
+
+
+
 

@@ -12,6 +12,13 @@
 @color-grey: #8F969E;
 @color-error: #CA0000;
 
+
+@cursor_trans: translate3d(calc(var(--move-x) / -5), calc(var(--move-y) / -5), 0);
+@transition-cursor: 2s cubic-bezier(.05, .5, .0, 1);
+
+@width: calc(@index * 16);
+@height: calc(@index * 10);
+
 @keyframes opp{
     0%{
         opacity: 0;
@@ -101,25 +108,97 @@ body{
             padding: calc(@index * 2) 0;
             background-color: @color-black;
             width: 100%;
+            overflow: hi;
             transition: all .6s ease;
             .lists{
                 display: flex;
                 gap: 60px;
+                align-items: center;
             }
-            ul{
-                color: @color-white;
+            .ul2{
+                opacity: 0;
                 list-style: none;
                 li{
-                    margin-bottom: 40px;
+                    padding: calc(@index*1) 0;
+                    a{
+                        &:hover .cursor{
+                            height: @height;
+                        }
+                        .cursor{
+                            position: fixed;
+                            width: @width;
+                            height: @height;
+                            top: 0;
+                            left: 0;
+                            overflow: hidden;
+                            transform: translate3d(var(--move-x), var(--move-y), 0);
+                            // position: fixed;
+                            // width: @width;
+                            // overflow: hidden;
+                            // height: 0;
+                            // top: calc(@height);
+                            // left: calc(@width);
+                            // transform: translate3d(var(--move-x), var(--move-y), 0);
+                            // will-change: transform;
+                            // z-index: 1;
+                            &__image{
+                                position: relative;
+                                width: calc(@width * 1.5);
+                                height: calc(@height * 1.5);
+                                top: calc(@height * -.25);
+                                left: calc(@width * -.04);
+                                background-size: cover;
+                                background-position: center;
+                                transform: @cursor_trans;
+                                transition: transform @transition-cursor;
+                            }
+                        }
+
+                        span{
+                            vertical-align:top;
+                            font-size: calc(@index);
+                        }
+                        padding: calc(@index*3) 0;
+                        font-size: calc(@index * 1.6);
+                        text-decoration: none;
+                        color: @color-grey;
+                        text-transform: uppercase;
+                        .hel();
+                        transition: all .3s ease;
+                        letter-spacing: 0.02em;
+                        &:hover{
+                            color: @color-white;
+                        }
+                        &::after{
+                            margin-top: calc(@index*2);
+                            background-color: @color-white;
+                            display: block;
+                            content: "";
+                            height: 1px;
+                            width: calc(@index*64);
+                            transition: width .3s ease;
+                        }
+                    }
+                }
+            }
+            .ul1{
+                list-style: none;
+                li{
+                    margin-bottom: calc(@index*2.3);
+
+                    .collections{
+                        &:hover .ul2{
+                            opacity: 1;
+                        }
+                    }
                     a{
                         display: inline-block;
-                        font-size: 40px;
+                        font-size: calc(@index * 2.2);
                         color: @color-grey;
                         text-transform: uppercase;
                         text-decoration: none;
                         letter-spacing: 0.02em;
                         .play();
-                        transition: all .3s ease;
                         &::after{
                             background-color: @color-white;
                             display: block;
@@ -240,6 +319,7 @@ body{
         display: flex;
         width: 100%;
         justify-content: space-between;
+        will-change: transform;
         .image{
             display: flex;
             width: calc(@index*13.3);
