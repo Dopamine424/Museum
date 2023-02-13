@@ -12,45 +12,53 @@
     <title>Музей изобразительных искусств</title>
 </head>
 <body>
+    <header class="header">
+        <div class="container">
+            <nav role="navigation">
+                <a href="#"><img src="img/logo.svg" alt="логотип" class="logo"></a>
+                <div class="burger">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
     <div class="wrapper">
         <div class="content">
-            <header class="header">
-                <div class="container">
-                    <nav role="navigation">
-                        <a href="#"><img src="img/logo.svg" alt="логотип" class="logo"></a>
-                        <div class="burger">
-                            <input type="checkbox" />
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                    </nav>
-                </div>
-            </header>
             <main>
                 <div class="block-1">
                    <div class="container">
-                        <h1 data-speed="0.01">Музей <span>изобразительных</span> искусств</h1>
+                        <h1 id="block-1-h1" data-speed="0.00001"><span>Музей</span> <span class="ital">изобразительных</span> <span>искусств</span></h1>
                         <div class="offer">
                             <div class="images">
-                                <div class="image">
+                                <div data-speed=".6" class="image">
                                     <p>Гора Ай-Петри 1920-1930гг</p>
-                                    <img src="img/block-1/img1.jpg" alt="">
+                                    <a href="#">
+                                        <img class="img-block1" id="img1" src="img/block-1/img1.jpg" alt="">
+                                    </a>
                                 </div>
-                                <div class="image">
+                                <div data-speed=".9" class="image">
                                     <p>Гора Ай-Петри 1920-1930гг</p>
-                                    <img src="img/block-1/img2.jpg" alt="">
+                                    <a href="#">
+                                        <img class="img-block1" id="img2" src="img/block-1/img2.jpg" alt="">
+                                    </a>
                                 </div>
-                                <div class="image">
+                                <div data-speed=".3" class="image">
                                     <p>Гора Ай-Петри 1920-1930гг</p>
-                                    <img src="img/block-1/img3.jpg" alt="">
+                                    <a href="#">
+                                        <img class="img-block1" id="img3" src="img/block-1/img3.jpg" alt="">
+                                    </a>
                                 </div>
-                                <div class="image">
+                                <div data-speed=".5" class="image">
                                     <p>Гора Ай-Петри 1920-1930гг</p>
-                                    <img src="img/block-1/img4.jpg" alt="">
+                                    <a href="#">
+                                        <img class="img-block1" id="img4" src="img/block-1/img4.jpg" alt="">
+                                    </a>
                                 </div>
                             </div>
-                            <a data-speed="0.01" href="#" class="cta"><span>Купить билет</span> <div class="svgs"><svg class="arrowCTA" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <a data-speed="0.00001" href="#" id="block-1-cta" class="cta"><span>Купить билет</span> <div class="svgs"><svg class="arrowCTA" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M37.6479 40.4365H58.5634M58.5634 40.4365V58.5633M58.5634 40.4365L40.4367 58.5633" stroke="white" stroke-width="1.39437"/>
                                 </svg> <svg class="bukCTA" width="99" height="99" viewBox="0 0 99 99" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 
@@ -84,7 +92,12 @@
                         </div>
                    </div>
                 </div>
-                <div class="block-2">wadwdadawdd</div>
+                <div class="block-2" data-speed="0.6">
+                    <div class="container">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse libero totam blanditiis facere, similique sint, quas, amet accusamus expedita nesciunt cum molestiae sit nemo earum neque vitae recusandae minus quis!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi minima aut impedit fuga a earum ullam repudiandae magni asperiores dolor dicta cum atque rerum, aperiam expedita sit? Eos, unde minus.</p>
+                    </div>
+                </div>
             </main>
             <footer></footer>
         </div>
