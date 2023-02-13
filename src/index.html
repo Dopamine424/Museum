@@ -7,6 +7,7 @@
     <script src="libs/gsap/gsap.min.js" defer></script>
     <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
     <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/jquery-1.10.2.min.js" defer></script>
     <script src="add.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>Музей изобразительных искусств</title>
@@ -17,10 +18,31 @@
             <nav role="navigation">
                 <a href="#"><img src="img/logo.svg" alt="логотип" class="logo"></a>
                 <div class="burger">
-                    <input type="checkbox" />
+                    <input type="checkbox" id="one" />
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+                <div class="menu">
+                    <div class="lists">
+                        <ul>
+                            <li><a href="#">О музее</a></li>
+                            <li><a href="#">Коллекции</a></li>
+                            <li><a href="#">Выставки</a></li>
+                            <li><a href="#">Поситителям</a></li>
+                            <li><a href="#">Художникам</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Русское искусство</a></li>
+                            <hr width="100%">
+                            <li><a href="#">Коллекции</a></li>
+                            <li><a href="#">Выставки</a></li>
+                            <li><a href="#">Поситителям</a></li>
+                            <li><a href="#">Художникам</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -45,7 +67,7 @@
                                         <img class="img-block1" id="img2" src="img/block-1/img2.jpg" alt="">
                                     </a>
                                 </div>
-                                <div data-speed=".3" class="image">
+                                <div data-speed=".4" class="image">
                                     <p>Гора Ай-Петри 1920-1930гг</p>
                                     <a href="#">
                                         <img class="img-block1" id="img3" src="img/block-1/img3.jpg" alt="">

@@ -12,7 +12,14 @@
 @color-grey: #8F969E;
 @color-error: #CA0000;
 
-
+@keyframes opp{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 
 @index: calc(1vh + 1vh);
 
@@ -51,6 +58,7 @@
 body{
     background-color: @color-black;
     overflow-x: hidden;
+    height: 100%;
 }
 
 @keyframes animCTA {
@@ -80,10 +88,60 @@ body{
 
 
 .header{
+    top: 00%;
     z-index: 1;
     position: fixed;
     width: 100%;
+    will-change: transform;
     nav{
+        .menu{
+            display: none;
+            top:calc(@index*5);
+            position: absolute;
+            padding: calc(@index * 2) 0;
+            background-color: @color-black;
+            width: 100%;
+            transition: all .6s ease;
+            .lists{
+                display: flex;
+                gap: 60px;
+            }
+            ul{
+                color: @color-white;
+                list-style: none;
+                li{
+                    margin-bottom: 40px;
+                    a{
+                        display: inline-block;
+                        font-size: 40px;
+                        color: @color-grey;
+                        text-transform: uppercase;
+                        text-decoration: none;
+                        letter-spacing: 0.02em;
+                        .play();
+                        transition: all .3s ease;
+                        &::after{
+                            background-color: @color-white;
+                            display: block;
+                            content: "";
+                            height: 2px;
+                            width: 0%;
+                            transition: width .3s ease;
+                        }
+                        &:hover{
+                            color: @color-white;
+                            &::after{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .menu-active{
+            transition: all .6s ease;
+            display: block;
+        }
         .logo{
             width: calc(@index*14);
             @media(max-width:459px){
@@ -159,7 +217,7 @@ body{
 /*----------------------block-1--------------------*/
 
 .block-1{
-    padding-bottom: 4000px;
+    padding-bottom: 3500px;
     h1{
         margin-top: calc(@index*20);
         //font-size: 120px;
@@ -174,6 +232,7 @@ body{
             .playit();
             color: @color-orange;
         }
+        will-change: transform;
     }
     .images{
         position: absolute;
@@ -271,10 +330,11 @@ body{
     }
 
     .block-2{
-        margin-top: 1000px;
+        margin-top: 1500px;
+        margin-bottom: 1000px;
         color: @color-white;
         z-index: 1;
         p{
-            font-size: 200px;
+            font-size: 100px;
         }
     }

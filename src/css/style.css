@@ -4,6 +4,14 @@
   padding: 0;
 }
 /*---------------------Переменные-----------------------*/
+@keyframes opp {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @font-face {
   font-family: playfair_reg;
   src: url('fonts/PlayfairDisplay-Regular.woff');
@@ -19,6 +27,7 @@
 body {
   background-color: #101922;
   overflow-x: hidden;
+  height: 100%;
 }
 @keyframes animCTA {
   0% {
@@ -40,14 +49,64 @@ body {
   }
 }
 .header {
+  top: 00%;
   z-index: 1;
   position: fixed;
   width: 100%;
+  will-change: transform;
 }
 .header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.header nav .menu {
+  display: none;
+  top: calc(calc(1vh + 1vh)*5);
+  position: absolute;
+  padding: calc(calc(1vh + 1vh) * 2) 0;
+  background-color: #101922;
+  width: 100%;
+  transition: all 0.6s ease;
+}
+.header nav .menu .lists {
+  display: flex;
+  gap: 60px;
+}
+.header nav .menu ul {
+  color: #FFFFFF;
+  list-style: none;
+}
+.header nav .menu ul li {
+  margin-bottom: 40px;
+}
+.header nav .menu ul li a {
+  display: inline-block;
+  font-size: 40px;
+  color: #8F969E;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  font-family: playfair_reg;
+  transition: all 0.3s ease;
+}
+.header nav .menu ul li a::after {
+  background-color: #FFFFFF;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+.header nav .menu ul li a:hover {
+  color: #FFFFFF;
+}
+.header nav .menu ul li a:hover::after {
+  width: 100%;
+}
+.header nav .menu-active {
+  transition: all 0.6s ease;
+  display: block;
 }
 .header nav .logo {
   width: calc(calc(1vh + 1vh)*14);
@@ -115,7 +174,7 @@ body {
 }
 /*----------------------block-1--------------------*/
 .block-1 {
-  padding-bottom: 4000px;
+  padding-bottom: 3500px;
 }
 .block-1 h1 {
   margin-top: calc(calc(1vh + 1vh)*20);
@@ -126,6 +185,7 @@ body {
   font-weight: 100;
   text-transform: uppercase;
   color: #FFFFFF;
+  will-change: transform;
 }
 .block-1 h1 .ital {
   font-family: playfair_it;
@@ -213,10 +273,11 @@ body {
   animation: none !important;
 }
 .block-2 {
-  margin-top: 1000px;
+  margin-top: 1500px;
+  margin-bottom: 1000px;
   color: #FFFFFF;
   z-index: 1;
 }
 .block-2 p {
-  font-size: 200px;
+  font-size: 100px;
 }

@@ -8,14 +8,29 @@ ScrollSmoother.create({
 });
 
 
-gsap.from('.header', { opacity: 0, duration: 0.7, y: -80});
+let h1Animation = () => {
+    const tlh = gsap.timeline({defaults: { duration: .7}});
+    tlh.to('h1', {opacity: 0, scrollTrigger:{
+        trigger: '.block-1',
+        start: 'top',
+        scrub: true
+    }});
+}
 
-gsap.to('h1', {opacity: 0, scrollTrigger:{
-    trigger: '.block-1',
-    start: 'top',
-    scrub: true
-}});
-gsap.to('#block-1-cta', {opacity: 0, scrollTrigger:{
+const tl = gsap.timeline({defaults: {duration: .7}});
+
+
+
+tl.from('.header', { opacity: 0, duration: 0.7, y: -80});
+
+tl.from('.menu-active',{opacity: 0, duration: 0.7} );
+
+
+
+tl.from('h1', { opacity: 0, display: 'none'})
+.add(h1Animation);
+
+tl.to('#block-1-cta', {opacity: 0, display: 'none', scrollTrigger:{
     trigger: '.block-1',
     start: 'top',
     scrub: true
@@ -27,3 +42,19 @@ document.querySelectorAll('.img-block1').forEach(node => {
         node.style.cssText = `--move-x: ${e.clientX}px; --move-y:${e.clientY}px`
     });
 });
+
+
+
+
+ //------------------Меню----------------------------------- 
+
+
+
+$(document).ready(function() {
+    $('.burger').click(function(event){
+        $('.menu').toggleClass('menu-active');
+    });
+});
+
+
+
