@@ -14,7 +14,8 @@
 
 
 @cursor_trans: translate3d(calc(var(--move-x) / -5), calc(var(--move-y) / -5), 0);
-@transition-cursor: 2s cubic-bezier(.05, .5, .0, 1);
+@transition-cursor: 1.25s cubic-bezier(.2, .5, 0, 1);
+@transition-cursor-image: 2s cubic-bezier(.05, .5, 0, 1);
 
 @width: calc(@index * 16);
 @height: calc(@index * 10);
@@ -121,9 +122,11 @@ body{
                 li{
                     padding: calc(@index*1) 0;
                     a{
+                        display: inline;
                         &:hover .cursor{
                             height: @height;
                         }
+
                         .cursor{
                             position: fixed;
                             width: @width;
@@ -132,6 +135,8 @@ body{
                             left: 0;
                             overflow: hidden;
                             transform: translate3d(var(--move-x), var(--move-y), 0);
+                            transition: transform @transition-cursor;
+                            will-change: transform;
                             // position: fixed;
                             // width: @width;
                             // overflow: hidden;
@@ -149,8 +154,8 @@ body{
                                 left: calc(@width * -.04);
                                 background-size: cover;
                                 background-position: center;
-                                transform: @cursor_trans;
-                                transition: transform @transition-cursor;
+                                transition: transform @transition-cursor-image;
+                                will-change: transform;
                             }
                         }
 

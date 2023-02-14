@@ -83,6 +83,7 @@ body {
   padding: calc(calc(1vh + 1vh)*1) 0;
 }
 .header nav .menu .ul2 li a {
+  display: inline;
   padding: calc(calc(1vh + 1vh)*3) 0;
   font-size: calc(calc(1vh + 1vh) * 1.6);
   text-decoration: none;
@@ -103,6 +104,8 @@ body {
   left: 0;
   overflow: hidden;
   transform: translate3d(var(--move-x), var(--move-y), 0);
+  transition: transform 1.25s cubic-bezier(0.2, 0.5, 0, 1);
+  will-change: transform;
 }
 .header nav .menu .ul2 li a .cursor__image {
   position: relative;
@@ -112,8 +115,8 @@ body {
   left: calc(calc(calc(1vh + 1vh) * 16) * -0.04);
   background-size: cover;
   background-position: center;
-  transform: translate3d(calc(var(--move-x) / -5), calc(var(--move-y) / -5), 0);
   transition: transform 2s cubic-bezier(0.05, 0.5, 0, 1);
+  will-change: transform;
 }
 .header nav .menu .ul2 li a span {
   vertical-align: top;
