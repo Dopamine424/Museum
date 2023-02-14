@@ -117,35 +117,31 @@ body{
                 align-items: center;
             }
             .ul2{
+                width: 100%;
                 opacity: 0;
                 list-style: none;
                 li{
-                    padding: calc(@index*1) 0;
+                    width: 100%;
                     a{
-                        display: inline;
+                        width: 100%;
+                        display: block;
+                        border-bottom: 1px solid @color-grey;
                         &:hover .cursor{
                             height: @height;
                         }
 
                         .cursor{
+                            pointer-events: none;
                             position: fixed;
                             width: @width;
-                            height: @height;
-                            top: 0;
-                            left: 0;
+                            top: calc(@height * -.5);
+                            left: calc(@width * -.5);
                             overflow: hidden;
                             transform: translate3d(var(--move-x), var(--move-y), 0);
-                            transition: transform @transition-cursor;
+                            transition: transform @transition-cursor-image, height .5s ease;
                             will-change: transform;
-                            // position: fixed;
-                            // width: @width;
-                            // overflow: hidden;
-                            // height: 0;
-                            // top: calc(@height);
-                            // left: calc(@width);
-                            // transform: translate3d(var(--move-x), var(--move-y), 0);
-                            // will-change: transform;
-                            // z-index: 1;
+                            z-index: 0;
+                            height: 0;
                             &__image{
                                 position: relative;
                                 width: calc(@width * 1.5);
@@ -154,6 +150,7 @@ body{
                                 left: calc(@width * -.04);
                                 background-size: cover;
                                 background-position: center;
+                                transform: translate3d(calc(var(--move-x) / -10), calc(var(--move-y) / -10), 0);
                                 transition: transform @transition-cursor-image;
                                 will-change: transform;
                             }
@@ -163,7 +160,7 @@ body{
                             vertical-align:top;
                             font-size: calc(@index);
                         }
-                        padding: calc(@index*3) 0;
+                        padding: calc(@index*2) 0;
                         font-size: calc(@index * 1.6);
                         text-decoration: none;
                         color: @color-grey;
@@ -174,15 +171,15 @@ body{
                         &:hover{
                             color: @color-white;
                         }
-                        &::after{
-                            margin-top: calc(@index*2);
-                            background-color: @color-white;
-                            display: block;
-                            content: "";
-                            height: 1px;
-                            width: calc(@index*64);
-                            transition: width .3s ease;
-                        }
+                        // &::after{
+                        //     margin-top: calc(@index*2);
+                        //     background-color: @color-white;
+                        //     display: block;
+                        //     content: "";
+                        //     height: 1px;
+                        //     width: calc(@index*64);
+                        //     transition: width .3s ease;
+                        // }
                     }
                 }
             }
@@ -191,18 +188,19 @@ body{
                 li{
                     margin-bottom: calc(@index*2.3);
 
-                    .collections{
-                        &:hover .ul2{
-                            opacity: 1;
-                        }
-                    }
+                    // .collections{
+                    //     &:hover .ul2{
+                    //         opacity: 1;
+                    //     }
+                    // }
                     a{
                         display: inline-block;
                         font-size: calc(@index * 2.2);
-                        color: @color-grey;
                         text-transform: uppercase;
                         text-decoration: none;
                         letter-spacing: 0.02em;
+                        color: @color-grey;
+                        transition: all .2s ease;
                         .play();
                         &::after{
                             background-color: @color-white;
@@ -213,11 +211,17 @@ body{
                             transition: width .3s ease;
                         }
                         &:hover{
-                            color: @color-white;
-                            &::after{
-                                width: 100%;
-                            }
+                            //color: @color-white;
                         }
+                        
+                    }
+                    .a-hover::after{
+                        background-color: @color-white;
+                        display: block;
+                        content: "";
+                        height: 2px;
+                        width: 100%;
+                        transition: width .3s ease;
                     }
                 }
             }

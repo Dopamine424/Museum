@@ -68,12 +68,18 @@ $(document).ready(function() {
     $('.collections').mouseover(function(event){
         $('.ul2').css('opacity','1');
         $('.ul2').css('pointer-events','auto');
+        $(this).css('color', 'white');
+        $(this).addClass('a-hover');
     });
+
 
     $('.musems').mouseover(function(event){
         $('.ul2').css('opacity','0');
         $('.ul2').css('pointer-events','none');
+        $('.collections').removeClass('a-hover');
+        $('.collections').css('color', '#8F969E');
     });
+
 
     // $('.musems').mouseout(function(event){
     //     $('.ul2').css('opacity','0');
