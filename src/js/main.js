@@ -17,6 +17,7 @@ let h1Animation = () => {
     }});
 }
 
+
 const tl = gsap.timeline({defaults: {duration: .7}});
 
 
@@ -82,5 +83,5 @@ $(document).ready(function() {
 
 
 
-
+// -------------------------------block 2 --------------------------
 

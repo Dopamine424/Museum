@@ -344,3 +344,14 @@ body {
 .block-2 p {
   font-size: 100px;
 }
+.block-2 .container .block2-art,
+.block-2 .container .block2-magic {
+  font-size: calc(calc(1vh + 1vh) * 5.7);
+  text-transform: uppercase;
+}
+.block-2 .container .block-2-line1 {
+  width: calc(calc(calc(1vh + 1vh) * 16) * 3.3);
+}
+.block-2 .container .block-2-line2 {
+  width: calc(calc(calc(1vh + 1vh) * 16) * 3.3);
+}
