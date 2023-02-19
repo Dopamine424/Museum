@@ -61,22 +61,28 @@ body {
   align-items: center;
 }
 .header nav .menu {
-  display: none;
+  transition: all 0.5s ease;
+  opacity: 0;
   top: calc(calc(1vh + 1vw)*2.5);
   position: absolute;
   padding: calc(calc(1vh + 1vw) * 2) 0;
   padding-top: calc(calc(1vh + 1vw) * 2);
   background-color: #101922;
   width: 100%;
-  overflow: hi;
-  transition: disply 2s ease;
+  overflow: hide;
+  pointer-events: none;
 }
 .header nav .menu .menu-footer {
   margin-top: 5%;
-  width: 99%;
+  width: 98%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@media (max-width: 1600px) {
+  .header nav .menu .menu-footer {
+    width: 90%;
+  }
 }
 .header nav .menu .menu-footer .cta {
   margin-top: 0;
@@ -205,10 +211,11 @@ body {
 }
 .header nav .menu-active {
   position: absolute;
-  transition: all 0.6s ease;
-  display: block;
+  transition: all 0.5s ease;
+  opacity: 1;
   width: 100%;
   height: calc(calc(1vh + 1vw) * 27);
+  pointer-events: auto;
 }
 .header nav .logo {
   z-index: 1;
@@ -277,11 +284,11 @@ body {
 }
 /*----------------------block-1--------------------*/
 .block-1 {
-  padding-bottom: 3500px;
+  padding-bottom: 2500px;
 }
 .block-1 h1 {
   padding-left: 5px;
-  margin-top: calc(calc(1vh + 1vw)*25);
+  margin-top: calc(calc(1vh + 1vw)*10.5);
   font-size: calc(calc(1vh + 1vw)*4.2);
   width: min-content;
   line-height: 0.99;
@@ -294,6 +301,11 @@ body {
 .block-1 h1 .ital {
   font-family: playfair_it;
   color: #FF4612;
+}
+@media (max-width: 768px) {
+  .block-1 h1 {
+    font-size: calc(calc(1vh + 1vw)*4.2);
+  }
 }
 .block-1 .images {
   position: absolute;
@@ -359,8 +371,23 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: calc(calc(1vh + 1vw)*-5);
+  margin-top: calc(calc(1vh + 1vw)*-8);
   z-index: 1;
+}
+@media (max-width: 1280px) {
+  .cta {
+    margin-top: calc(calc(1vh + 1vw)*-9);
+  }
+}
+@media (max-width: 1024px) {
+  .cta {
+    margin-top: calc(calc(1vh + 1vw)*-4);
+  }
+}
+@media (max-width: 768px) {
+  .cta {
+    margin-top: calc(calc(1vh + 1vw));
+  }
 }
 .cta:hover span {
   color: #FF4612;
@@ -371,10 +398,15 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-family: HelveticaL;
-  font-size: 20px;
+  font-size: calc(calc(1vh + 1vw)*0.7);
   padding: 5px 0;
   border-bottom: 1px solid #FFFFFF;
   transition: all 0.3s ease;
+}
+@media (max-width: 1024px) {
+  .cta .svgs {
+    transform: scale(0.8);
+  }
 }
 .cta .svgs .bukCTA {
   animation: animCTA 10s infinite linear;

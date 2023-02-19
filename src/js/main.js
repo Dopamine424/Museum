@@ -9,12 +9,20 @@ ScrollSmoother.create({
 
 
 let h1Animation = () => {
-    const tlh = gsap.timeline({defaults: { duration: .7}});
+    const tlh = gsap.timeline({});
     tlh.to('h1', {opacity: 0, scrollTrigger:{
         trigger: '.block-1',
-        start: 'top',
-        scrub: true
+        start: '-300',
+        scrub: true,
+        pin: true
+    }})
+    .to('#block-1-cta', {opacity: 0, scrollTrigger:{
+        trigger: '.block-1',
+        start: '-300',
+        scrub: true,
+        pin: true
     }});
+    
 }
 
 
