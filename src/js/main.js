@@ -10,20 +10,35 @@ ScrollSmoother.create({
 
 let h1Animation = () => {
     const tlh = gsap.timeline({});
-    tlh.to('h1', {opacity: 0, scrollTrigger:{
+    tlh.to('#block-1-h1', {opacity: 0, scrollTrigger:{
         trigger: '.block-1',
         start: '-300',
-        scrub: true,
-        pin: true
+        pin: '#block-1-h1',
+        scrub: true
     }})
     .to('#block-1-cta', {opacity: 0, scrollTrigger:{
         trigger: '.block-1',
         start: '-300',
         scrub: true,
-        pin: true
+        pin: '#block-1-cta'
+        
     }});
     
 }
+
+// gsap.to('#block-1-h1', {opacity: 0, scrollTrigger:{
+//     trigger: '.offer',
+//     start: '-500',
+//     scrub: true,
+//     pin: '#block-1-h1'
+// }});
+
+// gsap.to('#block-1-cta', {opacity: 0, scrollTrigger:{
+//     trigger: '.block-1',
+//     start: '-300',
+//     scrub: true,
+//     pin: '#block-1-cta'
+// }});
 
 
 const tl = gsap.timeline({defaults: {duration: .7}});

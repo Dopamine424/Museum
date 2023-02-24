@@ -73,7 +73,7 @@ body {
   pointer-events: none;
 }
 .header nav .menu .menu-footer {
-  margin-top: 5%;
+  margin-top: 0%;
   width: 98%;
   display: flex;
   justify-content: space-between;
@@ -286,9 +286,14 @@ body {
 .block-1 {
   padding-bottom: 2500px;
 }
+.block-1 .block-1__header {
+  margin-top: calc(calc(1vh + 1vw)*10.5);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .block-1 h1 {
   padding-left: 5px;
-  margin-top: calc(calc(1vh + 1vw)*10.5);
   font-size: calc(calc(1vh + 1vw)*4.2);
   width: min-content;
   line-height: 0.99;
@@ -308,8 +313,7 @@ body {
   }
 }
 .block-1 .images {
-  position: absolute;
-  top: 480%;
+  top: 450%;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -371,23 +375,7 @@ body {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: calc(calc(1vh + 1vw)*-8);
   z-index: 1;
-}
-@media (max-width: 1280px) {
-  .cta {
-    margin-top: calc(calc(1vh + 1vw)*-9);
-  }
-}
-@media (max-width: 1024px) {
-  .cta {
-    margin-top: calc(calc(1vh + 1vw)*-4);
-  }
-}
-@media (max-width: 768px) {
-  .cta {
-    margin-top: calc(calc(1vh + 1vw));
-  }
 }
 .cta:hover span {
   color: #FF4612;
