@@ -111,6 +111,30 @@ $(document).ready(function() {
         $('.contacts').css('color', '#8F969E');
     });
 
+       if (window.innerWidth <= 540) {
+        $('.collections').click(function(event){
+            $('.ul2_mobile').toggleClass('active');
+    
+            $(this).css('color', 'white');
+            $(this).addClass('a-hover');
+    
+            $('.musems').removeClass('a-hover');
+            $('.musems').css('color', '#8F969E');
+    
+            $('.vistv').removeClass('a-hover');
+            $('.vistv').css('color', '#8F969E');
+    
+            $('.posit').removeClass('a-hover');
+            $('.posit').css('color', '#8F969E');
+    
+            $('.hud').removeClass('a-hover');
+            $('.hud').css('color', '#8F969E');
+    
+            $('.contacts').removeClass('a-hover');
+            $('.contacts').css('color', '#8F969E');
+    
+        });
+       }
 
     $('.musems').mouseover(function(event){
         $('.ul2').css('opacity','0');
