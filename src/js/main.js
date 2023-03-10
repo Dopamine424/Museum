@@ -11,16 +11,16 @@ ScrollSmoother.create({
 let h1Animation = () => {
     const tlh = gsap.timeline({});
     tlh.to('#block-1-h1', {opacity: 0, scrollTrigger:{
-        trigger: '.block-1',
+        trigger: '#block-1',
         start: '-300',
         pin: '#block-1-h1',
         scrub: true
     }})
     .to('#block-1-cta', {opacity: 0, scrollTrigger:{
-        trigger: '.block-1',
+        trigger: '#block-1',
         start: '-300',
-        scrub: true,
-        pin: '#block-1-cta'
+        pin: '#block-1-cta',
+        scrub: true
         
     }});
     
@@ -51,11 +51,6 @@ tl.from('.header', { opacity: 0, y: -80})
 
 tl.add(h1Animation);
 
-tl.to('#block-1-cta', {opacity: 0, display: 'none', scrollTrigger:{
-    trigger: '.block-1',
-    start: 'top',
-    scrub: true
-}});
 
 gsap.from('.menu-active', {opacity: 0, duration: 5});
 
