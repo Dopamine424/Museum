@@ -1,4 +1,4 @@
-*{
+*,&::after,&::before{
     box-sizing: border-box;
     margin:0;
     padding: 0;
@@ -665,19 +665,34 @@ body{
 
 // ---------------------------------------------------- block - 4 ----------------------------------------------------------------
 #block-4{
+    padding-bottom: 800px;
+    #block-4__sec2{
+        opacity: 0;
+    }
     .section{
         position: relative;
         &__img{
             position: absolute;
         }
         #block-4__img-1{
-            left:20%
+            left:26%;
+            top: 8%;
+        }
+        #block-4__img-3{
+            left:76%;
+            top: 20%;
+            
+        }
+        #block-4__img-2{
+            top: 15%;
+            left:51%;
         }
         #block-4__img-4{
-            top: 100%;
-            left:20%
+            top: 27%;
+            left:26%;
         }
         &-content{
+            z-index: 1;
             padding-top: 270px;
             color: @color-white;
             display: flex;
@@ -697,6 +712,7 @@ body{
                 font-size: calc(@index * 1.4);
                 .playit();
                 font-weight: 100;
+                white-space: nowrap;
             }
         }
     }

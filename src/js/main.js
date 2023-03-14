@@ -32,13 +32,36 @@ let h1Animation = () => {
 //     scrub: true,
 //     pin: '#block-1-h1'
 // }});
-
-// gsap.to('#block-1-cta', {opacity: 0, scrollTrigger:{
-//     trigger: '.block-1',
-//     start: '-300',
-//     scrub: true,
-//     pin: '#block-1-cta'
-// }});
+gsap.to('#block-4__h2', {scrollTrigger:{
+    trigger: '#block-4',
+    start: '0',
+    scrub: true,
+    pin: '#block-4__h2'
+}});
+gsap.to('#block-4__sec', {opacity: 0, scrollTrigger:{
+    trigger: '#block-4',
+    start: '2400',
+    end: '2500',
+    scrub: true,
+}});
+gsap.to('#block-4__sec', {scrollTrigger:{
+    trigger: '#block-4',
+    start: '0',
+    scrub: true,
+    pin: '#block-4__sec'
+}});
+gsap.to('#block-4__sec2', {opacity: 100, scrollTrigger:{
+    trigger: '#block-4',
+    start: '2500',
+    end: '2600',
+    scrub: true,
+}});
+gsap.to('#block-4__sec2', {scrollTrigger:{
+    trigger: '#block-4',
+    start: '0',
+    scrub: true,
+    pin: '#block-4__sec2'
+}});
 
 
 const tl = gsap.timeline({defaults: {duration: .7}});
