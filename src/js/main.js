@@ -35,13 +35,14 @@ let h1Animation = () => {
 gsap.to('#block-4__h2', {scrollTrigger:{
     trigger: '#block-4',
     start: '0',
+    end: '4700',
     scrub: true,
     pin: '#block-4__h2'
 }});
 gsap.to('#block-4__sec', {opacity: 0, scrollTrigger:{
     trigger: '#block-4',
-    start: '2400',
-    end: '2500',
+    start: '2300',
+    end: '2400',
     scrub: true,
 }});
 gsap.to('#block-4__sec', {scrollTrigger:{
@@ -52,7 +53,7 @@ gsap.to('#block-4__sec', {scrollTrigger:{
 }});
 gsap.to('#block-4__sec2', {opacity: 100, scrollTrigger:{
     trigger: '#block-4',
-    start: '2500',
+    start: '2400',
     end: '2600',
     scrub: true,
 }});
