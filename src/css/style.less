@@ -502,7 +502,7 @@ body{
 
 #block-1{
     .block-1__header{
-        
+        margin-top: 300px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -728,6 +728,12 @@ body{
                 line-height: 110%;
             }
             h3{
+                @media(max-width: 768px){
+                    margin-top: 100px;
+                }
+                @media(max-width: 580px){
+                    margin-top: 50px;
+                }
                 margin-top: 200px;
                 // font-size: 40px;
                 font-size: calc(@index * 1.4);
@@ -742,6 +748,18 @@ body{
         position: relative;
     }
     h2{
+        @media(max-width: 1000px){
+            font-size: calc(@index * 3);
+        }
+        @media(max-width: 768px){
+            font-size: calc(@index * 2.5);
+        }
+        @media(max-width: 580px){
+            font-size: calc(@index * 2);
+        }
+        @media(max-width: 446px){
+            font-size: calc(@index * 1.6);
+        }
         margin-top: 200px;
         position: absolute;
         z-index: 1;
