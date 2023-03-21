@@ -288,3 +288,62 @@ $(document).ready(function() {
 
 // -------------------------------block 2 --------------------------
 
+//.second-row-block2
+//.first-row-block2
+gsap.fromTo('.first-row-block2', { x: -1000 , opacity: 0}, {
+    x: 0, opacity: 1,
+    scrollTrigger: {
+        trigger: '.first-row-block2',
+        // start: '100',
+        end:'-300',
+        scrub: true,
+        markers: true
+        
+    }
+    
+})
+gsap.fromTo('.second-row-block2', { x: 1000 , opacity: 0}, {
+    x: 0, opacity: 1,
+    scrollTrigger: {
+        trigger: '.first-row-block2',
+        // start: '100',
+        end:'-400',
+        scrub: true,
+        
+    }
+    
+})
+
+
+
+let block2_t = gsap.utils.toArray('.text-elem');
+
+
+
+block2_t.forEach(item => {
+    gsap.fromTo(item, {y: 150, opacity: 0},
+        {
+            y:0,
+            opacity:1,
+            scrollTrigger: {
+                //trigger: item,
+                trigger: ".text-elem",
+                start:'-850',
+                end:'-300',
+                scrub:true,
+                
+            }
+        })
+}); 
+    // block2_t.forEach(item => {
+    //     gsap.fromTo(item, {x: 150, opacity: 0},
+    //         {
+    //             opacity:1, x: 0,
+    //             scrollTrigger: {
+    //                 trigger: item,
+    //                 start:'-850',
+    //                 end:'-100',
+    //                 scrub:true
+    //             }
+    //         })
+    // }); 
