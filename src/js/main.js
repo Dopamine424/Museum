@@ -288,3 +288,61 @@ $(document).ready(function() {
 
 // -------------------------------block 2 --------------------------
 
+/* 
+==================================================================================================================
+--------------------------------------------------block - 5-------------------------------------------------------
+==================================================================================================================
+*/
+
+let block_5_main_title = gsap.utils.toArray('.title-block-5');
+let block_5_more_info = gsap.utils.toArray('.item-block-5');
+let block_5_info_blocks = gsap.utils.toArray('.info-item-block-5').reverse();
+
+
+
+
+block_5_main_title.forEach(item => {
+    gsap.fromTo(item, {y: 150, opacity: 0},
+        {
+            y:0,
+            opacity:1,
+            scrollTrigger: {
+                trigger: item,
+                start:'-850',
+                end:'-300',
+                scrub:true,
+                
+            }
+        }),
+        block_5_more_info.forEach(item => {
+            gsap.fromTo(item, {x: 150, opacity: 0},
+                {
+                    x:0,
+                    opacity:1,
+                    scrollTrigger: {
+                        trigger: item,
+                        //trigger: ".item-titile-block-5",
+                        start:'-250',
+                        //end:'-300',
+                        scrub:true,
+                        stagger:0.25
+                    }
+                })
+        }); 
+        block_5_info_blocks.forEach(item => {
+            gsap.fromTo(item, {x: -150, opacity: 0},
+                {
+                    x:0,
+                    opacity:1,
+                    delay:5,
+                    scrollTrigger: {
+                        trigger: item,
+                        //trigger: ".item-titile-block-5",
+                        start:'-850',
+                        end:'-300',
+                        scrub:true
+                    }
+                },console.log(item))
+        }),'+=2'; 
+}); 
+

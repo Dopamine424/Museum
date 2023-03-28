@@ -564,6 +564,9 @@ body {
   position: relative;
   top: -3138px;
 }
+#block-4 .section #block-4__sec {
+  z-index: 0;
+}
 #block-4 .section__img {
   position: absolute;
 }
@@ -671,4 +674,93 @@ body {
 #block-4 h2 .ital {
   color: #FF4612;
   font-family: playfair_it;
+}
+/*
+
+==================================================================================================================
+-------------------------------------------------- block 5 -------------------------------------------------------
+==================================================================================================================
+
+*/
+#block-5 .item-block-5 {
+  margin-left: auto;
+  width: 50%;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: HelveticaL;
+  width: 400;
+  font-size: calc(calc(1vh + 1vw) * 0.8);
+}
+#block-5 .item-block-5 span {
+  color: #FFFFFF;
+}
+#block-5 .item-block-5 .first-title-block-5-colored-text {
+  font-family: playfair_it;
+  color: #FF4612;
+}
+#block-5 .first-title-block-5:nth-child(1) {
+  text-align: center;
+}
+#block-5 .title-block-5 {
+  text-transform: uppercase;
+  font-family: playfair_reg;
+  color: #FFFFFF;
+  font-size: calc(calc(1vh + 1vw) * 3.5);
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+#block-5 .title-block-5 span:nth-child(1) {
+  color: #FF4612;
+  font-family: playfair_it;
+}
+#block-5 .title-block-5 span:nth-child(2) {
+  font-family: playfair_it;
+}
+#block-5 .info-block-5 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+#block-5 .info-item-block-5 {
+  color: #FFFFFF;
+  max-width: 385px;
+  width: 100%;
+}
+#block-5 .info-item-block-5 .item-titile-block-5 {
+  font-family: playfair_it;
+  font-size: calc(calc(1vh + 1vw) * 1);
+  text-transform: uppercase;
+}
+#block-5 .info-item-block-5 .info-text-block-5 {
+  margin-top: 15px;
+  font-size: calc(calc(1vh + 1vw) * 0.7);
+  font-family: playfair_reg;
+  color: #8F969E;
+}
+@media (max-width: 1024px) {
+  #block-5 .info-text-block-5 {
+    max-width: 90%;
+  }
+}
+@media (max-width: 900px) {
+  #block-5 .info-block-5 {
+    flex-wrap: wrap;
+  }
+  #block-5 .info-item-block-5 {
+    margin-top: 25px;
+    width: 50%;
+  }
+}
+@media (max-width: 640px) {
+  #block-5 .info-block-5 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #block-5 .info-item-block-5 {
+    margin-top: 25px;
+    width: 100%;
+  }
 }
