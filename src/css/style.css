@@ -541,16 +541,87 @@ body {
 .hide {
   opacity: 0;
 }
-#block-2 .container .block2-art,
-#block-2 .container .block2-magic {
-  font-size: calc(calc(1vh + 1vw) * 5.7);
+#block-2 .container .img-block-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#block-2 .container .img-block-2 .img-1-block-2 img {
+  width: calc(calc(1vh + 1vw) * 20);
+}
+#block-2 .container .img-block-2 .img-2-block-2 {
+  margin-left: auto;
+}
+#block-2 .container .img-block-2 .img-2-block-2 img {
+  width: calc(calc(1vh + 1vw) * 15);
+}
+#block-2 .container .title-block2 {
+  display: flex;
+  flex-direction: column;
+  font-family: playfair_reg;
+  font-weight: normal;
   text-transform: uppercase;
+  font-size: calc(calc(1vh + 1vw) * 3);
+  white-space: nowrap;
 }
-#block-2 .container .block-2-line1 {
-  width: calc(calc(calc(1vh + 1vw) * 14) * 3.3);
+#block-2 .container .title-block2 .first-row-block2 {
+  display: flex;
+  margin-right: auto;
 }
-#block-2 .container .block-2-line2 {
-  width: calc(calc(calc(1vh + 1vw) * 14) * 3.3);
+#block-2 .container .title-block2 .second-row-block2 {
+  display: flex;
+  margin-left: auto;
+}
+#block-2 .container .title-block2 .line,
+#block-2 .container .title-block2 .line2 {
+  height: 1px;
+  background-color: white;
+  margin: auto 0;
+  width: calc(calc(1vh + 1vw) * 30);
+}
+#block-2 .container .main-text-block2 {
+  font-family: HelveticaL;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: calc(calc(1vh + 1vw) * 1.4);
+  line-height: calc(calc(1vh + 1vw) * 1.5);
+  font-weight: 100;
+}
+#block-2 .container .main-text-block2 .colored-t-b2 {
+  font-family: playfair_reg;
+  color: #FF4612;
+  font-style: italic;
+}
+@media (max-width: 1000px) {
+  #block-2 .line,
+  #block-2 .line2 {
+    width: calc(calc(1vh + 1vw) * 25) !important;
+  }
+}
+@media (max-width: 720px) {
+  #block-2 .img-block-2 {
+    margin-top: 60px;
+  }
+  #block-2 .line,
+  #block-2 .line2 {
+    width: calc(calc(1vh + 1vw) * 20) !important;
+  }
+}
+@media (max-width: 576px) {
+  #block-2 .line,
+  #block-2 .line2 {
+    width: calc(calc(1vh + 1vw) * 15) !important;
+  }
+  #block-2 .img-1-block-2 {
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+  #block-2 .img-2-block-2 {
+    display: none;
+  }
 }
 #block-4 {
   padding-bottom: 800px;
