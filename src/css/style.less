@@ -905,6 +905,123 @@ body{
 #block-6{
 
 }
+#footer{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-logo-mini{
+        position: relative;
+        display: none;
+    }
+    .footer-ul-nav{
+        display: flex;
+        justify-content: space-around;
+        .play();
+        
+        
+        .nav-footer-item a{
+            color: #8F969E;
+            text-decoration: none;
+            cursor: pointer;
+            &:hover{
+                color: white;
+            }
+        }
+    }
+    .nav-footer{
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        width: 100%;
+        .nav-footer-item{
+            
+            
+        }
+    }
+    .footer-ul-nav{
+        list-style-type: none;
+        width: 100%;
+    }
+    .footer-line{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        height: 1px;
+        width: 100%;
+        background-color: #8F969E;
+    }
+    .footer-contacts{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .playit();
+
+        .footer-or{
+            .hel();
+            color: #8F969E;
+        }
+        ul{
+            display: flex;
+            width: 50%;
+            justify-content: space-around;
+            list-style: none;
+            li a{
+                text-decoration: none;
+                color: #8F969E;
+                text-transform: uppercase;
+                &:hover{
+                    color: white;
+                }
+            } 
+            
+        }
+        
+    }
+     @media(max-width: 720px){
+        .footer-logo{
+            display: none;
+        }
+        .footer-logo-mini{
+            width: 50px;
+            display: block;
+            
+            top: calc(@index * 2.5);
+            img{
+                margin: 0 auto;
+            }
+        }
+       .footer-ul-nav{
+            flex-direction: column;
+       }
+       .footer-ul-nav:nth-child(2){
+            text-align: end;
+       }
+    }
+    @media(max-width:600px){
+        .footer-or{
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .footer-logo-mini{
+            
+            scale: 0.7;
+        }
+        .footer-contacts{
+            flex-wrap: wrap;
+            ul{
+                width: 100%;
+            }
+        }
+        
+    }
+    @media(max-width:400px){
+        .footer-logo-mini{
+            top: 0;
+            scale: 1;
+        }
+    }
+}
 
 
 
