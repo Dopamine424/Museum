@@ -764,3 +764,108 @@ body {
     width: 100%;
   }
 }
+#footer {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#footer .footer-logo-mini {
+  position: relative;
+  display: none;
+}
+#footer .footer-ul-nav {
+  display: flex;
+  justify-content: space-around;
+  font-family: playfair_reg;
+}
+#footer .footer-ul-nav .nav-footer-item a {
+  color: #8F969E;
+  text-decoration: none;
+  cursor: pointer;
+}
+#footer .footer-ul-nav .nav-footer-item a:hover {
+  color: white;
+}
+#footer .nav-footer {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+}
+#footer .footer-ul-nav {
+  list-style-type: none;
+  width: 100%;
+}
+#footer .footer-line {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 1px;
+  width: 100%;
+  background-color: #8F969E;
+}
+#footer .footer-contacts {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-family: playfair_it;
+}
+#footer .footer-contacts .footer-or {
+  font-family: HelveticaL;
+  color: #8F969E;
+}
+#footer .footer-contacts ul {
+  display: flex;
+  width: 50%;
+  justify-content: space-around;
+  list-style: none;
+}
+#footer .footer-contacts ul li a {
+  text-decoration: none;
+  color: #8F969E;
+  text-transform: uppercase;
+}
+#footer .footer-contacts ul li a:hover {
+  color: white;
+}
+@media (max-width: 720px) {
+  #footer .footer-logo {
+    display: none;
+  }
+  #footer .footer-logo-mini {
+    width: 50px;
+    display: block;
+    top: calc(calc(1vh + 1vw) * 2.5);
+  }
+  #footer .footer-logo-mini img {
+    margin: 0 auto;
+  }
+  #footer .footer-ul-nav {
+    flex-direction: column;
+  }
+  #footer .footer-ul-nav:nth-child(2) {
+    text-align: end;
+  }
+}
+@media (max-width: 600px) {
+  #footer .footer-or {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #footer .footer-logo-mini {
+    scale: 0.7;
+  }
+  #footer .footer-contacts {
+    flex-wrap: wrap;
+  }
+  #footer .footer-contacts ul {
+    width: 100%;
+  }
+}
+@media (max-width: 400px) {
+  #footer .footer-logo-mini {
+    top: 0;
+    scale: 1;
+  }
+}

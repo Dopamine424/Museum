@@ -306,8 +306,10 @@ block_5_main_title.forEach(item => {
         {
             y:0,
             opacity:1,
+            
             scrollTrigger: {
                 trigger: item,
+                
                 start:'-850',
                 end:'-300',
                 scrub:true,
@@ -345,4 +347,57 @@ block_5_main_title.forEach(item => {
                 },console.log(item))
         }),'+=2'; 
 }); 
+
+// ------------- footer -------------
+
+
+const footer_logo = document.querySelector('.footer-logo');
+
+gsap.set(".footer-logo",{y:-100,opacity:0})
+gsap.to(".footer-logo",{
+    y:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".footer-logo",
+        toggleActions: "restart none none none",
+    },
+    duration: 1.5,
+    scrub:true
+})
+
+gsap.set(".nav-footer-item",{x:-100,opacity:0})
+gsap.to(".nav-footer-item",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".nav-footer-item",
+        toggleActions: "restart none none none",
+    },
+    duration: 1,
+    scrub:true
+})
+
+gsap.set(".ul-foo",{x:100,opacity:0})
+gsap.to(".ul-foo",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".ul-foo",
+        toggleActions: "restart none none none",
+    },
+    duration: 0.7,
+    scrub:true
+})
+
+gsap.set(".footer-or",{x:-100,opacity:0})
+gsap.to(".footer-or",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".footer-or",
+        toggleActions: "restart none none none",
+    },
+    duration: 0.7,
+    scrub:true
+})
 
