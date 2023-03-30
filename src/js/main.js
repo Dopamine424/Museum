@@ -288,6 +288,18 @@ $(document).ready(function() {
 
 // -------------------------------block 2 --------------------------
 
+
+--------------------------------------------------block - 5-------------------------------------------------------
+
+
+let block_5_main_title = gsap.utils.toArray('.title-block-5');
+let block_5_more_info = gsap.utils.toArray('.item-block-5');
+let block_5_info_blocks = gsap.utils.toArray('.info-item-block-5').reverse();
+
+
+
+
+block_5_main_title.forEach(item => {
 gsap.fromTo('.first-row-block2', { x: -1000 , opacity: 0}, {
     x: 0, opacity: 1,
     scrollTrigger: {
@@ -324,6 +336,7 @@ block2_t.forEach(item => {
             y:0,
             opacity:1,
             scrollTrigger: {
+                trigger: item,
                 //trigger: item,
                 trigger: ".text-elem",
                 start:'-850',
@@ -331,6 +344,90 @@ block2_t.forEach(item => {
                 scrub:true,
                 
             }
+        }),
+        block_5_more_info.forEach(item => {
+            gsap.fromTo(item, {x: 150, opacity: 0},
+                {
+                    x:0,
+                    opacity:1,
+                    scrollTrigger: {
+                        trigger: item,
+                        //trigger: ".item-titile-block-5",
+                        start:'-250',
+                        //end:'-300',
+                        scrub:true,
+                        stagger:0.25
+                    }
+                })
+        }); 
+        block_5_info_blocks.forEach(item => {
+            gsap.fromTo(item, {x: -150, opacity: 0},
+                {
+                    x:0,
+                    opacity:1,
+                    delay:5,
+                    scrollTrigger: {
+                        trigger: item,
+                        //trigger: ".item-titile-block-5",
+                        start:'-850',
+                        end:'-300',
+                        scrub:true
+                    }
+                },console.log(item))
+        }),'+=2'; 
+}); 
+// ------------- footer -------------
+
+
+const footer_logo = document.querySelector('.footer-logo');
+
+gsap.set(".footer-logo",{y:-100,opacity:0})
+gsap.to(".footer-logo",{
+    y:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".footer-logo",
+        toggleActions: "restart none none none",
+    },
+    duration: 1.5,
+    scrub:true
+})
+
+gsap.set(".nav-footer-item",{x:-100,opacity:0})
+gsap.to(".nav-footer-item",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".nav-footer-item",
+        toggleActions: "restart none none none",
+    },
+    duration: 1,
+    scrub:true
+})
+
+gsap.set(".ul-foo",{x:100,opacity:0})
+gsap.to(".ul-foo",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".ul-foo",
+        toggleActions: "restart none none none",
+    },
+    duration: 0.7,
+    scrub:true
+})
+
+gsap.set(".footer-or",{x:-100,opacity:0})
+gsap.to(".footer-or",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".footer-or",
+        toggleActions: "restart none none none",
+    },
+    duration: 0.7,
+    scrub:true
+})
         })
 }); 
     // block2_t.forEach(item => {
