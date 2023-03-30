@@ -288,11 +288,9 @@ $(document).ready(function() {
 
 // -------------------------------block 2 --------------------------
 
-/* 
-==================================================================================================================
+
 --------------------------------------------------block - 5-------------------------------------------------------
-==================================================================================================================
-*/
+
 
 let block_5_main_title = gsap.utils.toArray('.title-block-5');
 let block_5_more_info = gsap.utils.toArray('.item-block-5');
@@ -302,12 +300,45 @@ let block_5_info_blocks = gsap.utils.toArray('.info-item-block-5').reverse();
 
 
 block_5_main_title.forEach(item => {
+gsap.fromTo('.first-row-block2', { x: -1000 , opacity: 0}, {
+    x: 0, opacity: 1,
+    scrollTrigger: {
+        trigger: '.first-row-block2',
+        // start: '100',
+        end:'-300',
+        scrub: true,
+        markers: true
+        
+    }
+    
+})
+gsap.fromTo('.second-row-block2', { x: 1000 , opacity: 0}, {
+    x: 0, opacity: 1,
+    scrollTrigger: {
+        trigger: '.first-row-block2',
+        // start: '100',
+        end:'-400',
+        scrub: true,
+        
+    }
+    
+})
+
+
+
+let block2_t = gsap.utils.toArray('.text-elem');
+
+
+
+block2_t.forEach(item => {
     gsap.fromTo(item, {y: 150, opacity: 0},
         {
             y:0,
             opacity:1,
             scrollTrigger: {
                 trigger: item,
+                //trigger: item,
+                trigger: ".text-elem",
                 start:'-850',
                 end:'-300',
                 scrub:true,
@@ -397,3 +428,17 @@ gsap.to(".footer-or",{
     duration: 0.7,
     scrub:true
 })
+        })
+}); 
+    // block2_t.forEach(item => {
+    //     gsap.fromTo(item, {x: 150, opacity: 0},
+    //         {
+    //             opacity:1, x: 0,
+    //             scrollTrigger: {
+    //                 trigger: item,
+    //                 start:'-850',
+    //                 end:'-100',
+    //                 scrub:true
+    //             }
+    //         })
+    // }); 
