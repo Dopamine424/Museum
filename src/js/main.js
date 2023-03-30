@@ -288,10 +288,6 @@ $(document).ready(function() {
 
 // -------------------------------block 2 --------------------------
 
-
---------------------------------------------------block - 5-------------------------------------------------------
-
-
 let block_5_main_title = gsap.utils.toArray('.title-block-5');
 let block_5_more_info = gsap.utils.toArray('.item-block-5');
 let block_5_info_blocks = gsap.utils.toArray('.info-item-block-5').reverse();
@@ -307,7 +303,7 @@ gsap.fromTo('.first-row-block2', { x: -1000 , opacity: 0}, {
         // start: '100',
         end:'-300',
         scrub: true,
-        markers: true
+        
         
     }
     
@@ -337,8 +333,7 @@ block2_t.forEach(item => {
             opacity:1,
             scrollTrigger: {
                 trigger: item,
-                //trigger: item,
-                trigger: ".text-elem",
+                // trigger: ".text-elem",
                 start:'-850',
                 end:'-300',
                 scrub:true,
@@ -429,7 +424,6 @@ gsap.to(".footer-or",{
     scrub:true
 })
         })
-}); 
     // block2_t.forEach(item => {
     //     gsap.fromTo(item, {x: 150, opacity: 0},
     //         {
