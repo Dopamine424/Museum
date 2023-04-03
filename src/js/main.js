@@ -374,7 +374,7 @@ block2_t.forEach(item => {
 
 
 // -------------------------------block 3 --------------------------
-let block3TriggerStart = 
+
 gsap.to(".block-3", 
 {
     scrollTrigger:
@@ -450,7 +450,6 @@ if (window.innerWidth > 820) {
         opacity: 1.5
     });
 }
-
 
 if (window.innerWidth <= 1920 && window.innerWidth > 1600 || window.innerWidth >= 1920) {
     gsap.to(".block-3-text-left", 
@@ -990,7 +989,25 @@ if (window.innerWidth <= 430) {
     });
 }
 
+
+// -------------------------------block 7 --------------------------
+gsap.set("#block-7", {opacity: 0});
+gsap.to("#block-7", 
+{
+    scrollTrigger:
+    {
+        trigger: '#block-7',
+        start:"-1000",
+        end: "0",
+        markers: true,
+        scrub: true
+    },
+    opacity: 1
+});
+
+
 // ------------- footer -------------
+
 
 
 const footer_logo = document.querySelector('.footer-logo');
