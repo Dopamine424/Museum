@@ -611,8 +611,8 @@ if (window.innerWidth <= 820 && window.innerWidth > 700) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-1100',
-            end: '-100',
+            start: 0 - 20 - window.innerHeight + "",
+            end: 980 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -624,8 +624,8 @@ if (window.innerWidth <= 820 && window.innerWidth > 700) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-935',
-            end: '65',
+            start: 145 - window.innerHeight + "",
+            end: 1145 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -638,8 +638,8 @@ if (window.innerWidth <= 820 && window.innerWidth > 700) {
         scrollTrigger:
         {
             trigger: '.block-3',
-            start: '-435',
-            end: '265',
+            start: 645 - window.innerHeight + "",
+            end: 1345 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -677,8 +677,8 @@ if (window.innerWidth <= 700 && window.innerWidth > 610) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-1100',
-            end: '-100',
+            start: 0 - 20 - window.innerHeight + "",
+            end: 980 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -690,8 +690,8 @@ if (window.innerWidth <= 700 && window.innerWidth > 610) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-935',
-            end: '65',
+            start: 145 - window.innerHeight + "",
+            end: 1145 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -704,8 +704,8 @@ if (window.innerWidth <= 700 && window.innerWidth > 610) {
         scrollTrigger:
         {
             trigger: '.block-3',
-            start: '50',
-            end: '400',
+            start: 1130 - window.innerHeight + "",
+            end: 1480 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -743,8 +743,8 @@ if (window.innerWidth <= 610 && window.innerWidth > 520) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-1000',
-            end: '-250',
+            start: 80 - window.innerHeight + "",
+            end: 830 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -756,8 +756,8 @@ if (window.innerWidth <= 610 && window.innerWidth > 520) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-735',
-            end: '-150',
+            start: 345 - window.innerHeight + "",
+            end: 930 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -769,8 +769,8 @@ if (window.innerWidth <= 610 && window.innerWidth > 520) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-800',
-            end: '150',
+            start: 280 - window.innerHeight + "",
+            end: 1230 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -782,8 +782,8 @@ if (window.innerWidth <= 610 && window.innerWidth > 520) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-200',
-            end: '350',
+            start: 880 - window.innerHeight + "",
+            end: 1430 - window.innerHeight + "",
             scrub: true,
             markers: true
         },
@@ -796,8 +796,8 @@ if (window.innerWidth <= 610 && window.innerWidth > 520) {
         scrollTrigger:
         {
             trigger: '.block-3',
-            start: '50',
-            end: '500',
+            start: 1130 - window.innerHeight + "",
+            end: 1580 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -835,8 +835,8 @@ if (window.innerWidth <= 520 && window.innerWidth > 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-1000',
-            end: '-250',
+            start: 80 - window.innerHeight + "",
+            end: 830 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -848,8 +848,8 @@ if (window.innerWidth <= 520 && window.innerWidth > 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-735',
-            end: '-150',
+            start: 345 - window.innerHeight + "",
+            end: 930 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -861,8 +861,8 @@ if (window.innerWidth <= 520 && window.innerWidth > 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-800',
-            end: '150',
+            start: 280 - window.innerHeight + "",
+            end: 930 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -874,8 +874,8 @@ if (window.innerWidth <= 520 && window.innerWidth > 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-200',
-            end: '350',
+            start: 880 - window.innerHeight + "",
+            end: 1430 - window.innerHeight + "",
             scrub: true,
             markers: true
         },
@@ -888,8 +888,8 @@ if (window.innerWidth <= 520 && window.innerWidth > 430) {
         scrollTrigger:
         {
             trigger: '.block-3',
-            start: '50',
-            end: '500',
+            start: 1130 - window.innerHeight + "",
+            end: 1580 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -927,8 +927,8 @@ if (window.innerWidth <= 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-1000',
-            end: '-250',
+            start: 80 - window.innerHeight + "",
+            end: 830 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -940,8 +940,8 @@ if (window.innerWidth <= 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-735',
-            end: '-150',
+            start: 345 - window.innerHeight + "",
+            end: 930 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -953,8 +953,8 @@ if (window.innerWidth <= 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-800',
-            end: '150',
+            start: 280 - window.innerHeight + "",
+            end: 1230 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -966,8 +966,8 @@ if (window.innerWidth <= 430) {
         scrollTrigger: 
         {
             trigger: '.block-3',
-            start: '-200',
-            end: '350',
+            start: 880 - window.innerHeight + "",
+            end: 1430 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
@@ -980,8 +980,8 @@ if (window.innerWidth <= 430) {
         scrollTrigger:
         {
             trigger: '.block-3',
-            start: '50',
-            end: '400',
+            start: 1130 - window.innerHeight + "",
+            end: 1480 - window.innerHeight + "",
             scrub: true,
             markers: false
         },
