@@ -371,6 +371,625 @@ block2_t.forEach(item => {
                 },console.log(item))
         }),'+=2'; 
 }); 
+
+
+// -------------------------------block 3 --------------------------
+let block3TriggerStart = 
+gsap.to(".block-3", 
+{
+    scrollTrigger:
+    {
+        trigger: '.block-3',
+        start: 80 - window.innerHeight + "",
+        end: window.innerHeight - 280 + "",
+        markers: false,
+        scrub: true
+    },
+    y: 600
+});
+gsap.to(".block-3", 
+{
+    scrollTrigger:
+    {
+        trigger: '.block-3',
+        start: 80 - window.innerHeight + "",
+        end: 780 - window.innerHeight + "",
+        markers: false,
+        scrub: true
+    },
+    opacity: 1
+});
+gsap.set(".block-3-cards", {opacity: 0});
+gsap.to(".block-3-cards", 
+{
+    scrollTrigger:
+    {
+        trigger: '.block-3',
+        start: 480 - window.innerHeight + "",
+        end: 980 - window.innerHeight + "",
+        scrub: true,
+        markers: false
+    },
+    opacity: 1
+});
+gsap.to(".block-3-top_block", 
+{
+    scrollTrigger:
+    {
+        trigger: '.block-3',
+        start: 480 - window.innerHeight + "",
+        end: 980 - window.innerHeight + "",
+        scrub: true,
+        markers: false
+    },
+    y: -200,
+});
+gsap.to(".block-3-bottom_block", 
+{
+    scrollTrigger:
+    {
+        trigger: '.block-3',
+        start: 480 - window.innerHeight + "",
+        end: 980 - window.innerHeight + "",
+        scrub: true
+    },
+    y: 205,
+});
+if (window.innerWidth > 820) {
+    gsap.set(".block-3-cta", {y: -100, opacity: 0});
+    gsap.to(".block-3-cta", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 480 - window.innerHeight + "",
+            end: 980 - window.innerHeight + "",
+            scrub: true
+        },
+        y: 30,
+        opacity: 1.5
+    });
+}
+
+
+if (window.innerWidth <= 1920 && window.innerWidth > 1600 || window.innerWidth >= 1920) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-58.5%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "33.25%"
+    });
+}
+
+if (window.innerWidth <= 1600 && window.innerWidth > 1280) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-59.6%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "34.5%"
+    });
+}
+
+if (window.innerWidth <= 1280 && window.innerWidth > 1170) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-57.2%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "31.5%"
+    });
+}
+
+if (window.innerWidth <= 1170 && window.innerWidth > 1020) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-56%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "30%"
+    });
+}
+
+if (window.innerWidth <= 1020 && window.innerWidth > 820) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-54%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "25%"
+    });
+}
+
+if (window.innerWidth <= 820 && window.innerWidth > 700) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-51%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "21%"
+    });
+    gsap.set(".block-3-adaptive-cards-card-1", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-1100',
+            end: '-100',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-935',
+            end: '65',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-cta", {y: -100, opacity: 0});
+    gsap.to(".block-3-cta", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: '-435',
+            end: '265',
+            scrub: true,
+            markers: false
+        },
+        y: 30,
+        opacity: 1
+    });
+}
+
+if (window.innerWidth <= 700 && window.innerWidth > 610) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-47%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "17%"
+    });
+    gsap.set(".block-3-adaptive-cards-card-1", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-1100',
+            end: '-100',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-935',
+            end: '65',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-cta", {y: 250, opacity: 0});
+    gsap.to(".block-3-cta", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: '50',
+            end: '400',
+            scrub: true,
+            markers: false
+        },
+        opacity: 1,
+        y: 400
+    }); 
+}
+
+if (window.innerWidth <= 610 && window.innerWidth > 520) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-45%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "13%"
+    });
+    gsap.set(".block-3-adaptive-cards-card-1-img_adaptive", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1-img_adaptive",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-1000',
+            end: '-250',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-1-text", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1-text",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-735',
+            end: '-150',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2-img_adaptive", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2-img_adaptive",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-800',
+            end: '150',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2-text", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2-text",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-200',
+            end: '350',
+            scrub: true,
+            markers: true
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-cta", {y: 250, opacity: 0});
+    gsap.to(".block-3-cta", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: '50',
+            end: '500',
+            scrub: true,
+            markers: false
+        },
+        opacity: 1,
+        y: 350
+    });
+}
+
+if (window.innerWidth <= 520 && window.innerWidth > 430) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-42%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "5%"
+    });
+    gsap.set(".block-3-adaptive-cards-card-1-img_adaptive", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1-img_adaptive",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-1000',
+            end: '-250',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-1-text", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1-text",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-735',
+            end: '-150',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2-img_adaptive", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2-img_adaptive",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-800',
+            end: '150',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2-text", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2-text",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-200',
+            end: '350',
+            scrub: true,
+            markers: true
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-cta", {y: 250, opacity: 0});
+    gsap.to(".block-3-cta", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: '50',
+            end: '500',
+            scrub: true,
+            markers: false
+        },
+        opacity: 1,
+        y: 350
+    });
+}
+
+if (window.innerWidth <= 430) {
+    gsap.to(".block-3-text-left", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true,
+            markers: false
+        },
+        x: "-39%",
+    });
+    gsap.to(".block-3-text-right", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: 80 - window.innerHeight + "",
+            end: 480 - window.innerHeight + "",
+            scrub: true
+        },
+        x: "0%"
+    });
+    gsap.set(".block-3-adaptive-cards-card-1-img_adaptive", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1-img_adaptive",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-1000',
+            end: '-250',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-1-text", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-1-text",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-735',
+            end: '-150',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2-img_adaptive", {x: '600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2-img_adaptive",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-800',
+            end: '150',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-adaptive-cards-card-2-text", {x: '-600', opacity: 0});
+    gsap.to(".block-3-adaptive-cards-card-2-text",{
+        scrollTrigger: 
+        {
+            trigger: '.block-3',
+            start: '-200',
+            end: '350',
+            scrub: true,
+            markers: false
+        },
+        x: '0',
+        opacity: 1
+    });
+    gsap.set(".block-3-cta", {y: 250, opacity: 0});
+    gsap.to(".block-3-cta", 
+    {
+        scrollTrigger:
+        {
+            trigger: '.block-3',
+            start: '50',
+            end: '400',
+            scrub: true,
+            markers: false
+        },
+        opacity: 1,
+        y: 400
+    });
+}
+
 // ------------- footer -------------
 
 
