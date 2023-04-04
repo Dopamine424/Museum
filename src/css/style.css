@@ -1328,13 +1328,33 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.block-7-header {
+  margin-bottom: 70px;
+  background-color: #101922;
+}
+@media (max-width: 550px) {
+  .block-7-header {
+    margin-bottom: 30px;
+  }
+}
 .block-7-header-main_text {
   text-transform: uppercase;
   text-align: center;
   font-family: playfair_reg;
-  font-size: calc(calc(1vh + 1vw) * 3);
+  font-size: calc(calc(1vh + 1vw) * 3.33);
   color: #FFFFFF;
   width: 1177px;
+}
+@media (max-width: 1000px) {
+  .block-7-header-main_text {
+    width: 700px;
+    font-size: calc(calc(calc(1vh + 1vw) * 3.33) / 1.2);
+  }
+}
+@media (max-width: 550px) {
+  .block-7-header-main_text {
+    width: 300px;
+  }
 }
 .block-7-header-main_text span {
   color: #FF4612;
@@ -1346,33 +1366,81 @@ body {
   align-items: center;
   width: 610px;
 }
+@media (max-width: 1600px) {
+  .block-7-form {
+    width: 570px;
+  }
+}
+@media (max-width: 1280px) {
+  .block-7-form {
+    width: 470px;
+  }
+}
+@media (max-width: 960px) {
+  .block-7-form {
+    width: 430px;
+  }
+}
+@media (max-width: 550px) {
+  .block-7-form {
+    width: 320px;
+  }
+}
 .block-7-form-main_text {
   font-family: HelveticaL;
-  font-size: calc(calc(calc(1vh + 1vw) * 3) / 2.5);
+  font-size: calc(calc(calc(1vh + 1vw) * 3.33) / 2.5);
   text-transform: lowercase;
   color: #FFFFFF;
-  margin-top: 60px;
+  margin-bottom: 70px;
+  z-index: -1;
 }
-.block-7-form-input_name {
-  margin-bottom: 40px;
-  margin-top: 60px;
+@media (max-width: 960px) {
+  .block-7-form-main_text {
+    font-size: calc(calc(calc(1vh + 1vw) * 3.33) / 2.4);
+  }
+}
+@media (max-width: 550px) {
+  .block-7-form-main_text {
+    margin-bottom: 30px;
+  }
 }
 .block-7-form-input {
   display: flex;
   flex-direction: column;
   align-items: start;
   width: 100%;
+  margin-bottom: 40px;
+}
+@media (max-width: 1600px) {
+  .block-7-form-input {
+    margin-bottom: 33px;
+  }
+}
+@media (max-width: 1280px) {
+  .block-7-form-input {
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 960px) {
+  .block-7-form-input {
+    margin-bottom: 18px;
+  }
 }
 .block-7-form-input-text {
   font-family: playfair_reg;
-  font-size: calc(calc(calc(1vh + 1vw) * 3) / 5.5);
+  font-size: calc(calc(calc(1vh + 1vw) * 3.33) / 5.5);
   color: #8F969E;
   text-transform: uppercase;
+  margin-bottom: calc(calc(calc(1vh + 1vw) * 3.33) / 10);
+}
+@media (max-width: 1280px) {
+  .block-7-form-input-text {
+    font-size: 12px;
+  }
 }
 .block-7-form-input-input {
   font-family: HelveticaL;
   outline: none;
-  margin-top: 10px;
   height: 90px;
   width: 100%;
   background: #101922;
@@ -1380,18 +1448,41 @@ body {
   border-radius: 100px;
   border-color: #8F969E;
   color: #8F969E;
-  font-size: calc(calc(calc(1vh + 1vw) * 3) / 2.5);
+  font-size: calc(calc(calc(1vh + 1vw) * 3.33) / 2.5);
   padding-left: 47px;
   padding-right: 47px;
 }
+@media (max-width: 1600px) {
+  .block-7-form-input-input {
+    height: 82px;
+  }
+}
+@media (max-width: 1280px) {
+  .block-7-form-input-input {
+    height: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 960px) {
+  .block-7-form-input-input {
+    height: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
 .block-7-form-button {
-  margin-top: 78px;
+  margin-top: 40px;
+  font-family: HelveticaL;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 110%;
   width: 100%;
   height: 90px;
   border-radius: 100px;
   border: 1px solid;
   border-color: #FF4612;
-  font-size: 40px;
+  font-size: calc(calc(calc(1vh + 1vw) * 3.33) / 2.5);
   color: #FF4612;
   background-color: #101922;
   transition: all 0.3s ease;
@@ -1400,4 +1491,21 @@ body {
   background-color: #FF4612;
   color: #101922;
   cursor: pointer;
+}
+@media (max-width: 1600px) {
+  .block-7-form-button {
+    height: 82px;
+  }
+}
+@media (max-width: 1280px) {
+  .block-7-form-button {
+    height: 70px;
+    margin-top: 30px;
+  }
+}
+@media (max-width: 960px) {
+  .block-7-form-button {
+    height: 60px;
+    margin-top: 18px;
+  }
 }

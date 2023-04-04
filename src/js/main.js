@@ -997,10 +997,86 @@ gsap.to("#block-7",
     scrollTrigger:
     {
         trigger: '#block-7',
-        start:"-1000",
-        end: "0",
+        start: 80 - window.innerWidth + "",
+        end: 0,
         markers: true,
         scrub: true
+    },
+    opacity: 1
+});
+gsap.set(".block-7-header-main_text", {y: 100, opacity: 0});
+gsap.to(".block-7-header-main_text",
+{
+    scrollTrigger:{
+        trigger: "#block-7",
+        start: 0 - 20 - window.innerHeight + "",
+        end: 480 - window.innerHeight + "",
+        scrub: true,
+        markers: false
+    },
+    opacity: 1,
+    y: 0
+});
+gsap.set(".block-7-header-text-span_word", {opacity: 0});
+gsap.to(".block-7-header-text-span_word",
+{
+    scrollTrigger:{
+        trigger: "#block-7",
+        start: "-800",
+        end: "-550",
+        scrub: true,
+        markers: true
+    },
+    opacity: 1
+});
+gsap.set(".block-7-form-main_text", {opacity: 0, y: -150});
+gsap.to(".block-7-form-main_text",
+{
+    scrollTrigger:{
+        trigger: "#block-7",
+        start: "-800",
+        end: "-550",
+        scrub: true,
+        markers: true
+    },
+    opacity: 1,
+    y: 0
+});
+gsap.set(".block-7-form-input_name", {opacity: 0, y: -100});
+gsap.to(".block-7-form-input_name",
+{
+    scrollTrigger:{
+        trigger: "#block-7",
+        start: "-550",
+        end: "-400",
+        scrub: true,
+        markers: true
+    },
+    opacity: 1,
+    y: 0
+});
+gsap.set(".block-7-form-input-email", {opacity: 0, y: -100});
+gsap.to(".block-7-form-input-email",
+{
+    scrollTrigger:{
+        trigger: "#block-7",
+        start: "-400",
+        end: "-250",
+        scrub: true,
+        markers: true
+    },
+    opacity: 1,
+    y: 0
+});
+gsap.set(".block-7-form-button", {opacity: 0});
+gsap.to(".block-7-form-button",
+{
+    scrollTrigger:{
+        trigger: "#block-7",
+        start: "-250",
+        end: "-100",
+        scrub: true,
+        markers: true
     },
     opacity: 1
 });
