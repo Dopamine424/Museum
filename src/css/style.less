@@ -8,6 +8,10 @@
 
 @index: calc(1vh + 1vw);
 
+// @media (max-width:720px){
+//     @index: calc(0.5vh + 0.5vw)
+// }
+
 @color-orange: #FF4612;
 @color-white: #FFFFFF;
 @color-black: #101922;
@@ -672,22 +676,23 @@ body{
                 text-transform: uppercase;
                 font-size:calc(@index * 3);
                 white-space: nowrap;
-            .first-row-block2{
+            .first-row-block2, .second-row-block2{
                 display: flex;
-                margin-right: auto;
+                margin:  0 auto;
             }
-            .text-block2{
+            .text-block2:nth-child(1){
                 
             }
-            .second-row-block2{
-                display: flex;
-                margin-left: auto;
-            }
+            
+                
             .line, .line2{
                 height: 1px;
                 background-color: white;
                 margin: auto 0;
                 width: calc(@index * 30);
+                @media (max-width:1000px){
+                       width: 100%;
+                }
             } 
         }
         .main-text-block2{
@@ -707,27 +712,22 @@ body{
                 color: #FF4612;
                 font-style:italic;
             }
+            @media (max-width:720px){
+                font-size: calc(@index * 1.1);
+            }
+            @media (max-width:350px){
+                font-size: calc(@index * 1);
+            }
+            
         }
     }
-    @media (max-width:1000px){
-        .line,.line2{
-            width: calc(@index * 25) !important;
-        }
-    }
+    
     @media (max-width:720px){
         .img-block-2{
             margin-top: 60px;
         }
-        .line,.line2{
-            width: calc(@index * 20) !important;
-        }
     }
     @media (max-width:576px){
-        .line, .line2{
-           
-           width: calc(@index * 15) !important;
-        } 
-       
         .img-1-block-2{
             
             margin: 0 auto;
@@ -737,6 +737,7 @@ body{
             display: none;
         }
     }
+    
     
    
 }
@@ -1263,9 +1264,10 @@ body{
             font-size: calc(@index * 0.70);
             .play();
             color:@color-grey;
+
         }
     }
-    @media(max-width: 1024px){
+    @media(max-width: 1200px){
         .info-text-block-5{
             max-width:90%;
         }
