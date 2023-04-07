@@ -982,9 +982,96 @@ body{
 
 // ---------------------------------------------------- block - 6 ----------------------------------------------------------------
 
+@block-6-adaptive-1600px: 1600px;
+@block-6-adaptive-1280px: 1280px;
+@block-6-adaptive-960px: 960px;
+@block-6-adaptive-750px: 750px;
+
 .block-6{
+    display: flex;
+    align-items: center;
     &-header_text {
-        
+        margin-bottom: 70px;
+        .play();
+        font-size: calc(@index * 3.33);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        &-span {
+            .playit();
+            color: @color-orange;
+        }
+    }
+    &-main {
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            cursor: pointer;
+            &:hover &-text {
+                color: #FFFFFF;
+            }
+            &:hover &-second_text {
+                color: #FFFFFF;
+            }
+            &-text {
+                white-space: nowrap;
+                .playit();
+                color: #FFFFFF;
+                font-weight: 400;
+                font-size: calc(calc(@index * 3.33) / 2.5);
+                line-height: 99.5%;
+                letter-spacing: 0.05em;
+                text-transform: uppercase;
+                color: @color-grey;
+                transition: all 0.3s ease;
+                text-overflow: ellipsis;
+                @media (max-width: @block-6-adaptive-750px) {
+                    font-size: 23px;
+                }
+            }
+            &-second_text {
+                max-width: 800px;
+                height: 49px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                @media (max-width: @block-6-adaptive-1600px) {
+                    max-width: 630px;
+                }
+                @media (max-width: @block-6-adaptive-1280px) {
+                    max-width: 470px;
+                }
+                @media (max-width: @block-6-adaptive-960px) {
+                    max-width: 310px;
+                    height: 57px;
+                    font-size: 14px;
+                    -webkit-line-clamp: 4;
+                }
+                @media (max-width: @block-6-adaptive-750px) {
+                    display: none;
+                }
+                .hel();
+                color: #FFFFFF;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 99.5%;
+                letter-spacing: 0.05em;
+                color: @color-grey;
+                transition: all 0.3s ease;
+            }
+        }
+        &-line {
+            height: 1px;
+            background-color: @color-grey;
+        }
     }
 }
 
