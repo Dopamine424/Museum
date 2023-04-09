@@ -986,6 +986,8 @@ body{
 @block-6-adaptive-1280px: 1280px;
 @block-6-adaptive-960px: 960px;
 @block-6-adaptive-750px: 750px;
+@block-6-width: 326px;
+@block-6-height: 206px;
 
 .block-6{
     display: flex;
@@ -1011,9 +1013,16 @@ body{
             align-items: center;
             padding-top: 30px;
             padding-bottom: 30px;
+            border-bottom: 1px solid @color-grey;
             cursor: pointer;
+            @media (min-width: 1000px) {
+                cursor: none;
+            }
             &:hover &-text {
                 color: #FFFFFF;
+            }
+            &:hover .block-6-cursor {
+                height: @block-6-height;
             }
             &:hover &-second_text {
                 color: #FFFFFF;
@@ -1073,11 +1082,36 @@ body{
             background-color: @color-grey;
         }
     }
+    &-cursor {
+        position: fixed;
+        top: calc(@index * 32 * -.5);
+        left: calc(@width * -.5);
+        width: @width;
+        height: 0;
+        overflow: hidden;
+        transform: translate3d(var(--move-x), var(--move-y), 0);
+        transition: transform @transition-cursor-image, height 1s ease;
+        will-change: transform;
+        z-index: 0;
+        pointer-events: none;
+        &__image{
+            position: relative;
+            width: calc(@width * 1.5);
+            height: calc(@height * 1.5);
+            top: calc(@height * -.25);
+            left: calc(@width * -.04);
+            background-size: cover;
+            background-position: center;
+            transform: translate3d(calc(var(--move-x) / -10), calc(var(--move-y) / -100), 0);
+            transition: transform @transition-cursor-image;
+            will-change: transform;
+        }
+    }
 }
 
 #footer{
     display: flex;
-    color: white;
+    color: white; 
     flex-direction: column;
     justify-content: center;
     align-items: center;

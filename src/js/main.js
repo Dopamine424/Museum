@@ -370,12 +370,19 @@ block2_t.forEach(item => {
                         trigger: item,
                         //trigger: ".item-titile-block-5",
                         start:'-850',
-                        end:'-300',
+                        end:'-300', 
                         scrub:true
                     }
                 },console.log(item))
         }),'+=2'; 
 }); 
+
+// ------------------------------- block 6 --------------------------
+document.querySelectorAll('.block-6-cursor').forEach(node => {
+    document.addEventListener('mousemove', e => {
+        node.style.cssText = `--move-x: ${e.pageX}px; --move-y: ${e.pageY}px;` 
+    })
+})
 
 
 // ------------- footer -------------
