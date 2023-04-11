@@ -2,6 +2,8 @@
  //------------------Меню----------------------------------- 
 
 
+
+
     $(document).ready(function() {
         $('.burger').click(function(event){
             $('.menu').toggleClass('menu-active');
@@ -14,6 +16,7 @@
         $('.collections').mouseover(function(event){
             $('.ul2').css('opacity','1');
             $('.ul2').css('pointer-events','auto');
+
             $(this).css('color', 'white');
             $(this).addClass('a-hover');
 
@@ -87,8 +90,6 @@
             $('.contacts').css('color', '#8F969E');
             
         });
-
-    }
 
     }
 
@@ -249,96 +250,6 @@ if (window.innerWidth >= 1000) {
 
     });
 
-    });
-
-if (window.innerWidth >= 1000) {
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-ScrollSmoother.create({
-    wrapper: '.wrapper',
-    content: '.content',
-    smooth: 1.5,
-    effects: true
-});
-
-
-let h1Animation = () => {
-    const tlh = gsap.timeline({});
-    tlh.to('#block-1-h1', {opacity: 0, scrollTrigger:{
-        trigger: '#block-1',
-        start: '-300',
-        pin: '#block-1-h1',
-        scrub: true
-    }})
-    .to('#block-1-cta', {opacity: 0, scrollTrigger:{
-        trigger: '#block-1',
-        start: '-300',
-        pin: '#block-1-cta',
-        scrub: true
-        
-    }});
-    
-}
-
-// gsap.to('#block-4__h2', {scrollTrigger:{
-//     trigger: '#block-4',
-//     start: '-15%',
-//     scrub: true,
-//     markers:true,
-//     pin: '#block-4__h2'
-// }});
-// gsap.to('#block-4__sec', {opacity: 0, scrollTrigger:{
-//     trigger: '#block-4',
-//     start: '2300',
-//     end: '2400',
-//     scrub: true,
-// }});
-// gsap.to('#block-4__sec', {scrollTrigger:{
-//     trigger: '#block-4',
-//     start: '-15%',
-//     scrub: true,
-//     markers:true,
-//     pin: '#block-4__sec'
-// }});
-// gsap.to('#block-4__sec2', {opacity: 100, scrollTrigger:{
-//     trigger: '#block-4',
-//     start: '2400',
-//     end: '2500',
-//     scrub: true,
-// }});
-// gsap.to('#block-4__sec2', {scrollTrigger:{
-//     trigger: '#block-4',
-//     start: '0',
-//     scrub: true,
-//     pin: '#block-4__sec2'
-// }});
-
-
-const tl = gsap.timeline({defaults: {duration: .7}});
-
-
-
-tl.from('.header', { opacity: 0, y: -80})
-    .from('.menu-active',{opacity: 0} )
-    //.from('h1', {opacity: 0});
-
-tl.add(h1Animation);
-
-
-gsap.from('.menu-active', {opacity: 0, duration: 5});
-
-
-document.querySelectorAll('.img-block1').forEach(node => {
-    document.addEventListener('mousemove', e => {
-        node.style.cssText = `--move-x: ${e.clientX}px; --move-y:${e.clientY}px`
-    });
-});
-
-document.querySelectorAll('.cursor').forEach(node => {
-    document.addEventListener('mousemove', e => {
-        node.style.cssText = `--move-x: ${e.clientX}px; --move-y:${e.clientY}px`
-    });
-});
     }
 
 
@@ -408,43 +319,6 @@ ScrollSmoother.create({
 });
 
 
-block_5_main_title.forEach(item => {
-gsap.fromTo('.text-block2:nth-child(1)', {paddingLeft: '100%',/* x: -1000 , */opacity: 0}, {
-    /*x: 0,*/ opacity: 1, paddingLeft: '0%',
-    scrollTrigger: {
-        trigger: '.first-row-block2',
-        // start: '100',
-        end:'-300',
-        scrub: true,
-        
-        
-    }
-    
-})
-gsap.fromTo('.text-block2:nth-child(2)', {paddingRight: '100%',/* x: -1000 , */opacity: 0}, {
-    /*x: 0,*/ opacity: 1, paddingRight: '0%',
-    scrollTrigger: {
-        trigger: '.first-row-block2',
-        // start: '100',
-        end:'-300',
-        scrub: true,
-        
-        
-    }
-    
-})
-// gsap.fromTo('.second-row-block2', { x: 1000 , opacity: 0}, {
-//     x: 0, opacity: 1,
-//     scrollTrigger: {
-//         trigger: '.first-row-block2',
-//         // start: '100',
-//         end:'-400',
-//         scrub: true,
-        
-//     }
-    
-// })
-
 let h1Animation = () => {
     const tlh = gsap.timeline({});
     tlh.to('#block-1-h1', {opacity: 0, scrollTrigger:{
@@ -462,7 +336,6 @@ let h1Animation = () => {
     }});
     
 }
-
 
 // gsap.to('#block-4__h2', {scrollTrigger:{
 //     trigger: '#block-4',
@@ -508,86 +381,6 @@ tl.from('.header', { opacity: 0, y: -80})
 
 tl.add(h1Animation);
 
-
-// -------------------------------block 3 --------------------------
-gsap.set(".block-3-text-left", { paddingLeft: '33%' });
-
-gsap.to(".block-3", 
-{
-    scrollTrigger:
-    {
-        trigger: '.block-3',
-        start: 80 - window.innerHeight + "",
-        end: window.innerHeight - 280 + "",
-        markers: false,
-        scrub: true
-    },
-    y: 600
-});
-gsap.set(".block-3", {opacity: 0});
-gsap.to(".block-3", 
-{
-    scrollTrigger:
-    {
-        trigger: '.block-3',
-        start: 80 - window.innerHeight + "",
-        end: 780 - window.innerHeight + "",
-        markers: false,
-        scrub: true
-    },
-    opacity: 1
-});
-gsap.set(".block-3-cards", {opacity: 0});
-gsap.to(".block-3-cards", 
-{
-    scrollTrigger:
-    {
-        trigger: '.block-3',
-        start: 480 - window.innerHeight + "",
-        end: 980 - window.innerHeight + "",
-        scrub: true,
-        markers: false
-    },
-    opacity: 1
-});
-gsap.to(".block-3-top_block", 
-{
-    scrollTrigger:
-    {
-        trigger: '.block-3',
-        start: 480 - window.innerHeight + "",
-        end: 980 - window.innerHeight + "",
-        scrub: true,
-        markers: false
-    },
-    y: -200,
-});
-gsap.to(".block-3-bottom_block", 
-{
-    scrollTrigger:
-    {
-        trigger: '.block-3',
-        start: 480 - window.innerHeight + "",
-        end: 980 - window.innerHeight + "",
-        scrub: true
-    },
-    y: 205,
-});
-if (window.innerWidth > 820) {
-    gsap.set(".block-3-cta", {y: -100, opacity: 0});
-    gsap.to(".block-3-cta", 
-    {
-        scrollTrigger:
-        {
-            trigger: '.block-3',
-            start: 480 - window.innerHeight + "",
-            end: 980 - window.innerHeight + "",
-            scrub: true
-        },
-        y: 30,
-        opacity: 1.5
-    });
-}
 
 gsap.from('.menu-active', {opacity: 0, duration: 5});
 
@@ -1066,62 +859,6 @@ document.querySelectorAll('.block-6-cursor').forEach(node => {
     })
 })
 
-
-// -------------------------------block 7 --------------------------
-
-gsap.set(".block-7-header-text-span_word",{ opacity:0 })
-gsap.to(".block-7-header-text-span_word",{
-    scrollTrigger:{
-        trigger:".block-7",
-        start: 180 - window.innerHeight + "",
-        end: 730 - window.innerHeight + "",
-        scrub: true
-    },
-    opacity: 1
-});
-gsap.set(".block-7-form-main_text",{ y: -100, opacity: 0 })
-gsap.to(".block-7-form-main_text",{
-    scrollTrigger:{
-        trigger:".block-7",
-        start: 380 - window.innerHeight + "",
-        end: 580 - window.innerHeight + "",
-        scrub: true
-    },
-    opacity: 1,
-    y: 0
-});
-gsap.set(".block-7-form-input_name",{ y: -100, opacity: 0 })
-gsap.to(".block-7-form-input_name",{
-    scrollTrigger:{
-        trigger:".block-7",
-        start: 580 - window.innerHeight + "",
-        end: 730 - window.innerHeight + "",
-        scrub: true
-    },
-    opacity: 1,
-    y: 0
-});
-gsap.set(".block-7-form-input-email",{ y: -50, opacity: 0 })
-gsap.to(".block-7-form-input-email",{
-    scrollTrigger:{
-        trigger:".block-7",
-        start: "-350",
-        end: "-250",
-        scrub: true
-    },
-    opacity: 1,
-    y: 0
-});
-gsap.set(".block-7-form-button",{ opacity: 0 })
-gsap.to(".block-7-form-button",{
-    scrollTrigger:{
-        trigger:".block-7",
-        start: "-300",
-        end: "-150",
-        scrub: true
-    },
-    opacity: 1.5
-});
 
 // ------------- footer -------------
 
