@@ -3,6 +3,7 @@
 
 
 
+
     $(document).ready(function() {
         $('.burger').click(function(event){
             $('.menu').toggleClass('menu-active');
@@ -64,6 +65,12 @@
             $('.ul2').css('opacity','0');
             $('.ul2').css('pointer-events','none');
 
+
+    if (window.innerWidth <= 540) {
+        $('.collections').click(function(event){
+            $('.ul2_mobile').toggleClass('active');
+    
+
             $(this).css('color', 'white');
             $(this).addClass('a-hover');
 
@@ -84,6 +91,9 @@
             
         });
 
+    }
+
+
 
         $('.vistv').mouseover(function(event){
             $('.ul2').css('opacity','0');
@@ -92,6 +102,12 @@
             $(this).css('color', 'white');
             $(this).addClass('a-hover');
 
+
+        $('.vistv').removeClass('a-hover');
+        $('.vistv').css('color', '#8F969E');
+
+        $('.posit').removeClass('a-hover');
+        $('.posit').css('color', '#8F969E');
             $('.collections').removeClass('a-hover');
             $('.collections').css('color', '#8F969E');
 
@@ -125,6 +141,11 @@
             $('.vistv').removeClass('a-hover');
             $('.vistv').css('color', '#8F969E');
 
+
+        $('.contacts').removeClass('a-hover');
+        $('.contacts').css('color', '#8F969E');
+
+    });
             $('.hud').removeClass('a-hover');
             $('.hud').css('color', '#8F969E');
 
@@ -149,6 +170,10 @@
             $('.vistv').removeClass('a-hover');
             $('.vistv').css('color', '#8F969E');
 
+        $('.contacts').removeClass('a-hover');
+        $('.contacts').css('color', '#8F969E');
+
+    });
             $('.posit').removeClass('a-hover');
             $('.posit').css('color', '#8F969E');
 
@@ -173,6 +198,10 @@
             $('.vistv').removeClass('a-hover');
             $('.vistv').css('color', '#8F969E');
 
+        $('.contacts').removeClass('a-hover');
+        $('.contacts').css('color', '#8F969E');
+
+    });
             $('.posit').removeClass('a-hover');
             $('.posit').css('color', '#8F969E');
 
@@ -216,7 +245,13 @@ if (window.innerWidth >= 1000) {
             
         }});
         
+        $('.hud').removeClass('a-hover');
+        $('.hud').css('color', '#8F969E');
+
+    });
+
     }
+
 
     // gsap.to('#block-4__h2', {scrollTrigger:{
     //     trigger: '#block-4',
@@ -272,11 +307,96 @@ if (window.innerWidth >= 1000) {
         });
     });
 
-    document.querySelectorAll('.cursor').forEach(node => {
-        document.addEventListener('mousemove', e => {
-            node.style.cssText = `--move-x: ${e.clientX}px; --move-y:${e.clientY}px`
-        });
+
+if (window.innerWidth >= 1000) {
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+ScrollSmoother.create({
+    wrapper: '.wrapper',
+    content: '.content',
+    smooth: 1.5,
+    effects: true
+});
+
+
+let h1Animation = () => {
+    const tlh = gsap.timeline({});
+    tlh.to('#block-1-h1', {opacity: 0, scrollTrigger:{
+        trigger: '#block-1',
+        start: '-300',
+        pin: '#block-1-h1',
+        scrub: true
+    }})
+    .to('#block-1-cta', {opacity: 0, scrollTrigger:{
+        trigger: '#block-1',
+        start: '-300',
+        pin: '#block-1-cta',
+        scrub: true
+        
+    }});
+    
+}
+
+// gsap.to('#block-4__h2', {scrollTrigger:{
+//     trigger: '#block-4',
+//     start: '-15%',
+//     scrub: true,
+//     markers:true,
+//     pin: '#block-4__h2'
+// }});
+// gsap.to('#block-4__sec', {opacity: 0, scrollTrigger:{
+//     trigger: '#block-4',
+//     start: '2300',
+//     end: '2400',
+//     scrub: true,
+// }});
+// gsap.to('#block-4__sec', {scrollTrigger:{
+//     trigger: '#block-4',
+//     start: '-15%',
+//     scrub: true,
+//     markers:true,
+//     pin: '#block-4__sec'
+// }});
+// gsap.to('#block-4__sec2', {opacity: 100, scrollTrigger:{
+//     trigger: '#block-4',
+//     start: '2400',
+//     end: '2500',
+//     scrub: true,
+// }});
+// gsap.to('#block-4__sec2', {scrollTrigger:{
+//     trigger: '#block-4',
+//     start: '0',
+//     scrub: true,
+//     pin: '#block-4__sec2'
+// }});
+
+
+const tl = gsap.timeline({defaults: {duration: .7}});
+
+
+
+tl.from('.header', { opacity: 0, y: -80})
+    .from('.menu-active',{opacity: 0} )
+    //.from('h1', {opacity: 0});
+
+tl.add(h1Animation);
+
+
+gsap.from('.menu-active', {opacity: 0, duration: 5});
+
+
+document.querySelectorAll('.img-block1').forEach(node => {
+    document.addEventListener('mousemove', e => {
+        node.style.cssText = `--move-x: ${e.clientX}px; --move-y:${e.clientY}px`
     });
+});
+
+document.querySelectorAll('.cursor').forEach(node => {
+    document.addEventListener('mousemove', e => {
+        node.style.cssText = `--move-x: ${e.clientX}px; --move-y:${e.clientY}px`
+    });
+});
+
 
 
     // -------------------------------block 2 --------------------------
@@ -288,18 +408,15 @@ if (window.innerWidth >= 1000) {
 
 
 
-    block_5_main_title.forEach(item => {
-    gsap.fromTo('.text-block2:nth-child(1)', {paddingLeft: '100%',/* x: -1000 , */opacity: 0}, {
-        /*x: 0,*/ opacity: 1, paddingLeft: '0%',
-        scrollTrigger: {
-            trigger: '.first-row-block2',
-            // start: '100',
-            end:'-300',
-            scrub: true,
-            
-            
-        }
-        
+
+block_5_main_title.forEach(item => {
+gsap.fromTo('.text-block2:nth-child(1)', {paddingLeft: '100%',/* x: -1000 , */opacity: 0}, {
+    /*x: 0,*/ opacity: 1, paddingLeft: '0%',
+    scrollTrigger: {
+        trigger: '.first-row-block2',
+        // start: '100',
+        end:'-300',
+        scrub: true, 
     })
     gsap.fromTo('.text-block2:nth-child(2)', {paddingRight: '100%',/* x: -1000 , */opacity: 0}, {
         /*x: 0,*/ opacity: 1, paddingRight: '0%',
@@ -717,6 +834,97 @@ if (window.innerWidth >= 1000) {
             opacity: 1,
             y: 400
         }); 
+
+        block_5_info_blocks.forEach(item => {
+            gsap.fromTo(item, {x: -150, opacity: 0},
+                {
+                    x:0,
+                    opacity:1,
+                    delay:5,
+                    scrollTrigger: {
+                        trigger: item,
+                        //trigger: ".item-titile-block-5",
+                        start:'-850',
+                        end:'-300', 
+                        scrub:true
+                    }
+                },console.log(item))
+        }),'+=2'; 
+}); 
+
+// ------------------------------- block 6 --------------------------
+document.querySelectorAll('.block-6-cursor').forEach(node => {
+    document.addEventListener('mousemove', e => {
+        node.style.cssText = `--move-x: ${e.pageX}px; --move-y: ${e.pageY}px;` 
+    })
+})
+
+
+// ------------- footer -------------
+
+
+const footer_logo = document.querySelector('.footer-logo');
+
+gsap.set(".footer-logo",{y:-100,opacity:0})
+gsap.to(".footer-logo",{
+    y:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".footer-logo",
+        toggleActions: "restart none none none",
+    },
+    duration: 1.5,
+    scrub:true
+})
+
+gsap.set(".nav-footer-item",{x:-100,opacity:0})
+gsap.to(".nav-footer-item",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".nav-footer-item",
+        toggleActions: "restart none none none",
+    },
+    duration: 1,
+    scrub:true
+})
+
+gsap.set(".ul-foo",{x:100,opacity:0})
+gsap.to(".ul-foo",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".ul-foo",
+        toggleActions: "restart none none none",
+    },
+    duration: 0.7,
+    scrub:true
+})
+
+gsap.set(".footer-or",{x:-100,opacity:0})
+gsap.to(".footer-or",{
+    x:0,
+    opacity:1,
+    scrollTrigger:{
+        trigger:".footer-or",
+        toggleActions: "restart none none none",
+    },
+    duration: 0.7,
+    scrub:true
+})
+        })
+    // block2_t.forEach(item => {
+    //     gsap.fromTo(item, {x: 150, opacity: 0},
+    //         {
+    //             opacity:1, x: 0,
+    //             scrollTrigger: {
+    //                 trigger: item,
+    //                 start:'-850',
+    //                 end:'-100',
+    //                 scrub:true
+    //             }
+    //         })
+    // }); 
     }
 
     if (window.innerWidth <= 610 && window.innerWidth > 520) {
@@ -1060,5 +1268,6 @@ if (window.innerWidth >= 1000) {
         //             }
         //         })
         // }); 
+
 
 }
