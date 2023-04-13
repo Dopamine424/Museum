@@ -7,6 +7,7 @@
         $('.menu').toggleClass('menu-active');
         $('.body').toggleClass('hide');
         $('.dark').toggleClass('show-dark');
+        
     });
 });
 var explode = function(){
