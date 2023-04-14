@@ -1698,6 +1698,30 @@ body{
 }
 
 
+.block-7{
+    input{
+        &:hover{
+            border-color: @color-white;
+            transition: .2s ease;
+        }
+        &:hover label{
+            border-color: @color-white;
+            transition: .2s ease;
+        }
+        &:active{
+            border-color: @color-orange;
+            transition: .2s ease;
+            color: @color-white;
+        }
+        &:focus{
+            border-color: @color-orange;
+            transition: .2s ease;
+            color: @color-white;
+        }
+    }
+}
+
+
 /*--------------------------------------------------footer----------------------------------------*/
 
 #footer{

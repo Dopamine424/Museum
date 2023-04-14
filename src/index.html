@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icons/logo-musem.ico" type="image/x-icon">
     <script src="libs/gsap/gsap.min.js" defer></script>
     <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
     <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
@@ -485,22 +486,21 @@
                                 Узнавайте о новых <span class="block-7-header-text-span_word">выставках</span> первым
                             </p>
                         </div>
-                        <div class="block-7-form">
+                        <form class="block-7-form">
                             <p class="block-7-form-main_text">
                                 Просто заполните форму ниже.
                             </p>
                             <div class="block-7-form-input_name block-7-form-input">
-                                <p class="block-7-form-input_name-text block-7-form-input-text">Ваше имя</p>
-                                <input class="block-7-form-input_name-input block-7-form-input-input" type="text">
+                                <label for="name" name="name" id="name" class="block-7-form-input_name-text block-7-form-input-text">Ваше имя</label>
+                                <input required class="block-7-form-input_name-input block-7-form-input-input" type="text">
                             </div>  
                             <div class="block-7-form-input-email block-7-form-input">
-                                <p class="block-7-form-input_email-text block-7-form-input-text">Ваш email</p>
-                                <input class="block-7-form-input_email-input block-7-form-input-input" type="text">
+                                <label for="email" class="block-7-form-input_email-text block-7-form-input-text">Ваш email</label>
+                                <input name="email" id="email" required class="block-7-form-input_email-input block-7-form-input-input" type="email">
                             </div>
-                            <button class="block-7-form-button">
-                                Отправить
-                            </button>
-                        </div>
+                            <button type="submit" class="block-7-form-button">Отправить</button>
+                                
+                    </form>
                     </div>
                 </div>
 

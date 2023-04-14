@@ -1506,6 +1506,24 @@ body {
     margin-top: 18px;
   }
 }
+.block-7 input:hover {
+  border-color: #FFFFFF;
+  transition: 0.2s ease;
+}
+.block-7 input:hover label {
+  border-color: #FFFFFF;
+  transition: 0.2s ease;
+}
+.block-7 input:active {
+  border-color: #FF4612;
+  transition: 0.2s ease;
+  color: #FFFFFF;
+}
+.block-7 input:focus {
+  border-color: #FF4612;
+  transition: 0.2s ease;
+  color: #FFFFFF;
+}
 /*--------------------------------------------------footer----------------------------------------*/
 #footer {
   padding-bottom: 350px;
