@@ -1,3 +1,21 @@
+function fadePreloader() {
+    if($('.loader').length) {
+      $('.loader').fadeOut(1000,function(){
+        $('.loader').remove();
+      });
+    }
+  }
+  
+  $(document).ready(function(){
+    fadePreloader()  
+  });
+  
+  setTimeout(function () {    
+     fadePreloader()
+  }, 10000);
+  
+ 
+ 
  //------------------Меню----------------------------------- 
 
 
@@ -7,7 +25,7 @@
         $('.menu').toggleClass('menu-active');
         $('.body').toggleClass('hide');
         $('.dark').toggleClass('show-dark');
-        
+        $('.ul2').toggleClass('hide');
     });
 });
 var explode = function(){

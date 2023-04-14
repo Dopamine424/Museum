@@ -13,7 +13,6 @@
 .cursor{
 	will-change: transform !important;
 }
-
 .menu{
 	margin: 0 auto !important;
 	overflow: auto;
