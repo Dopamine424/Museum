@@ -36,3 +36,8 @@ window.onscroll = function() {
 window.scrollTo(0, 1)
 
 
+document.querySelectorAll('.cursor').forEach(node => {
+    document.addEventListener('mousemove', e => {
+        node.style.cssText = `--move-x: ${e.clientX}px; --move-y: ${e.clientY}px;` 
+    })
+});

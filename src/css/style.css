@@ -1642,15 +1642,20 @@ body {
 .title-tic-main {
   margin-top: 240px;
   color: white;
-  font-size: 40px;
+  font-size: 100px;
+  text-transform: uppercase;
   font-family: playfair_reg;
 }
 .price-list-name {
   color: #8F969E;
   font-family: playfair_it;
-  font-size: 22px;
-  font-size: calc(calc(1vh + 1vw) * 0.9);
+  font-size: 40px;
   margin-top: 60px;
+}
+@media (max-width: 400px) {
+  .price-list-name {
+    font-size: 20px;
+  }
 }
 .line-tic {
   width: 100%;
@@ -1669,6 +1674,9 @@ body {
   font-family: HelveticaL;
   font-size: calc(calc(1vh + 1vw) * 0.8);
 }
+.wr-tic p {
+  font-size: 20px;
+}
 .wr-tic #nm-1,
 .wr-tic #nm-2,
 .wr-tic #nm-3,
@@ -1684,6 +1692,8 @@ body {
 }
 .wr-tic .name-mp-gr span {
   text-decoration: underline;
+  font-size: 20px;
+  font-family: HelveticaL;
 }
 @media (max-width: 960px) {
   .wr-tic .name-mp-gr {
@@ -1694,12 +1704,15 @@ body {
 }
 .wr-tic .name-serv {
   grid-column-start: 2 ;
+  font-size: 20px;
 }
 .wr-tic .pr-gr {
   grid-column-start: 3 ;
+  font-size: 20px;
 }
 .wr-tic .pr-gr-1 {
   grid-column-start: 4 ;
+  font-size: 20px;
 }
 .wr-tic .buy-type-btn {
   grid-column-start: 5 ;

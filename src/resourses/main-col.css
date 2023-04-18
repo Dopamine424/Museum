@@ -37,11 +37,10 @@ body::-webkit-scrollbar {
 body {
 	background-color:  #101922;;
 	color:  #FFFFFF;
-	font-size: calc(var(--index) * .8);
 	
-	line-height: 1.75;
+
 	height: var(--depth);
-	font-weight: 300;
+
 }
 .container-col {
 	width: 100%;

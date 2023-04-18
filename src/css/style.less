@@ -1856,15 +1856,19 @@ body{
 .title-tic-main{
     margin-top: 240px;
     color: white;
-    font-size: 40px;
+    font-size: 100px;
+    text-transform: uppercase;
     .play();
 }
 .price-list-name{
     color: #8F969E;
     .playit();
-    font-size: 22px;
-    font-size: calc(@index * .9);
+    font-size: 40px;
+    
     margin-top: 60px;
+    @media(max-width:400px){
+        font-size: 20px;
+    }
 }
 .line-tic{
     width: 100%;
@@ -1880,7 +1884,9 @@ body{
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(7, 30px);
     color: white;
-    
+    p{
+        font-size: 20px;
+    }
     .hel();
     font-size: calc(@index * .8);
     
@@ -1891,6 +1897,8 @@ body{
    .name-mp-gr{
     span{
         text-decoration: underline;
+        font-size: 20px;
+        .hel();
     }
     .play();
     text-align: start;
@@ -1905,12 +1913,15 @@ body{
    }
    .name-serv{
         grid-column-start: 2 ;
+        font-size: 20px;
     }
     .pr-gr{
         grid-column-start: 3 ;
+        font-size: 20px;
     }
     .pr-gr-1{
         grid-column-start: 4 ;
+        font-size: 20px;
     }
     .buy-type-btn{
         grid-column-start: 5 ;
