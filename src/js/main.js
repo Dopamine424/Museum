@@ -273,6 +273,18 @@ let h1Animation = () => {
 //     pin: '#block-4__sec2'
 // }});
 
+// gsap.to('#block-4__sec', {scrollTrigger:{
+//     trigger: '#block-4',
+//     start: '0',
+//     scrub: true,
+//     pin: '#block-4__sec'
+// }});
+// gsap.to('#block-4__sec2', {scrollTrigger:{
+//     trigger: '#block-4-2',
+//     start: '0',
+//     scrub: true,
+//     pin: '#block-4__sec2'
+// }});
 
 const tl = gsap.timeline({defaults: {duration: .7}});
 
