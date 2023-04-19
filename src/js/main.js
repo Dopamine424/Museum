@@ -387,7 +387,7 @@ block2_t.forEach(item => {
                     scrollTrigger: {
                         trigger: item,
                         //trigger: ".item-titile-block-5",
-                        start:'-250',
+                        start:'-550',
                         //end:'-300',
                         scrub:true,
                         stagger:0.25
