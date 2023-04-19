@@ -2385,11 +2385,12 @@ body {
     display: none;
   }
   #footer .footer-logo-mini {
-    width: 50px;
+    width: 45px;
     display: block;
     top: calc(calc(1vh + 1vw) * 2.5);
   }
   #footer .footer-logo-mini img {
+    width: 100%;
     margin: 0 auto;
   }
   #footer .footer-ul-nav {
