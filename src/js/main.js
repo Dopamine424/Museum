@@ -1033,6 +1033,28 @@ if (window.innerWidth <= 430) {
 
 
 
+//---------------------------------block-4-------------------------------
+
+let block_4_title = gsap.utils.toArray('.h2-text-block-4');
+// let block_5_more_info = gsap.utils.toArray('.item-block-5');
+// let block_5_info_blocks = gsap.utils.toArray('.info-item-block-5').reverse();
+
+
+
+
+block_4_title.forEach(item => {
+gsap.fromTo(item, { x: 200 }, {
+    x: 0,
+    scrollTrigger: {
+        trigger: item,
+        // start: '-400',
+        end:'-100',
+        scrub: true,
+    }
+    
+})})
+
+
 // ------------------------------- block 6 --------------------------
 document.querySelectorAll('.block-6-cursor').forEach(node => {
     document.addEventListener('mousemove', e => {
