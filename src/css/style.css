@@ -858,8 +858,39 @@ body {
   display: flex;
   align-items: center;
   width: 200px;
+  margin-left: 1.5%;
   gap: 16px;
   z-index: 1;
+}
+@media (max-width: 1919px) {
+  .block-3-cta {
+    margin-left: 2.5%;
+  }
+}
+@media (max-width: 1599px) {
+  .block-3-cta {
+    margin-left: 1.5%;
+  }
+}
+@media (max-width: 1279px) {
+  .block-3-cta {
+    margin-left: 1%;
+  }
+}
+@media (max-width: 959px) {
+  .block-3-cta {
+    margin-left: 0;
+  }
+}
+@media (max-width: 639px) {
+  .block-3-cta {
+    margin-left: 0;
+  }
+}
+@media (max-width: 399px) {
+  .block-3-cta {
+    margin-left: 0;
+  }
 }
 @media (max-width: 640px) {
   .block-3-cta {
