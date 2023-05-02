@@ -125,13 +125,9 @@ h1, h2, h3, h4 {
 	margin-top: 3vh;
 	font-family: HelveticaL;
 font-style: normal;
-
 line-height: 120%;
 /* or 24px */
-
-
 color: rgba(255, 255, 255, 0.8);
-
 }
 sup{
 	
@@ -196,7 +192,31 @@ border: 1px solid #FF4612;
 border-radius: 100px;
 }
 
+@media (max-width : 640px) {
+	.frame h3{
+		left: 30px;
+	}
+	.frame p {
+		max-width: 100vw;
+		left: 30px;
+	}
+	.text-right > * {
+		position: relative;
+		top: 22vw;
+		
+	}
+	.text-left > * {
+		position: relative;
+		top: 22vw;
+	}
+	.frame-media_left {
+		bottom: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+	}
+	.frame-media_right {
+		bottom: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+	}
 
+}
 
 
 
