@@ -195,6 +195,14 @@ body {
 		font-size: 20px;
 	}
 }
+@media (max-width : 992px) {
+
+	.hea{
+		position: relative;
+	}
+
+
+}
 @media (max-width : 890px) {
 
 	.g2{
