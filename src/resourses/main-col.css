@@ -103,12 +103,12 @@ h1, h2, h3, h4 {
 }
 .text-left > * {
 	position: relative;
-	right: 18vw;
+	right: 50%;
 }
 
 .text-botton > * {
 	position: relative;
-	top: 18vw;
+	top: 50%;
 }
 
 
@@ -212,20 +212,14 @@ border-radius: 100px;
 	.frame-media_left {
 		bottom: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 	}
+	.frame-media_left {
+		right: 0;
+	}
 	.frame-media_right {
 		bottom: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 	}
+	.frame-media_right {
+		left:0;
+	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
