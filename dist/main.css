@@ -1,9 +1,9 @@
-*, *::after *::before{
+/* *, *::after *::before{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 	
-}
+} */
 
 :root {
 	--gap: .6em;
@@ -13,7 +13,7 @@
 .cursor{
 	will-change: transform !important;
 }
-.menu{
+/* .menu{
 	margin: 0 auto !important;
 	overflow: auto;
 	overflow-x: hidden;
@@ -21,13 +21,13 @@
 }
 .menu-active{
 	height: auto !important;
-	width: 90% !important;
+	width: 100% !important;
 }
 
 .menu-active{
 	height: auto !important;
-	width: 90% !important;
-}
+	width: 100% !important;
+} */
 body {
 	overflow: hidden;
 	height: 100vh;
@@ -37,9 +37,9 @@ body {
 	
 	background-color: #101922;
 }
-.header{
+/* .header{
 	z-index: 1999;
-}
+} */
 .ssss {
 	color: white
 }
@@ -165,9 +165,9 @@ body {
 
 @media (max-width : 992px) {
 
-	.header {
+	/* .header {
 		position: relative;
-	}
+	} */
 
 	body {
 		overflow: scroll;
@@ -186,7 +186,9 @@ body {
 
 }
 @media (max-width : 1000px) {
-
+	.hea{
+		display: none;
+	}
 	.g1{
 		display: none;
 	}
