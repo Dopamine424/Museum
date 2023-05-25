@@ -113,6 +113,28 @@ body {
 .overlay:hover{
 	opacity: 1;
 }
+
+@media(max-width:760px){
+	.overlay{
+		opacity: 1;
+		background: none;
+		display: flex;
+		align-items: flex-end;
+		margin-top: 60px;
+	}
+	.overlay p {
+		width: 100%;
+		position: relative;
+		/* top: 25%;
+		left: 2%; */
+		font-size: 4px;
+	}
+	.gallery__item {
+		overflow: visible;
+		margin-bottom: 100px;
+	}
+}
+
 .gallery__item:hover .overlay{
 	
 
@@ -158,6 +180,20 @@ body {
 	}
 } */
 
+a{
+	text-decoration: none;
+	color: white;
+	font-size: 22px !important;
+}
+.gallery__item{
+	font-size: 22px !important;
+}
+
+#p_bottom{
+	/* display: none; */
+	font-size: 22px !important;
+
+}
 
 
 
