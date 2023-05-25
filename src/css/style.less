@@ -2322,8 +2322,11 @@ body{
     }
     .rr1{
         justify-self: start !important;
-        grid-column-start: 2 !important;
+        grid-column-start: 3 !important;
         grid-column-end: 4 !important;
+        @media (max-width:959px) {
+            grid-column-start: 2 !important;
+        }
     }
     .pr-gr-1{
         grid-column-start: 4 ;
@@ -2500,7 +2503,10 @@ body{
 }
 .fx2{
     grid-template-rows: repeat(3,30px);
-    grid-template-columns: repeat(2,1fr) !important;
+    grid-template-columns: repeat(4,1fr) !important;
+    @media (max-width:959px) {
+        grid-template-columns: repeat(2,1fr) !important;
+    }
 }
 .name-mp-gr{
     p{
@@ -2511,6 +2517,10 @@ body{
 }
 .b23{
     width: 104px;
+    margin-left: -24px;
+    @media(max-width:959px){
+        margin-left: 0px;
+    }
 }
 
 .btn-tic-buy{
@@ -2562,7 +2572,9 @@ body{
     }
 }
 .fx2{
-    margin-top: 0;
+    @media(max-width:960px){
+        margin-top: 70px;
+ }
 }
 
   

@@ -2570,8 +2570,13 @@ body {
 }
 .wr-tic .rr1 {
   justify-self: start !important;
-  grid-column-start: 2 !important;
+  grid-column-start: 3 !important;
   grid-column-end: 4 !important;
+}
+@media (max-width: 959px) {
+  .wr-tic .rr1 {
+    grid-column-start: 2 !important;
+  }
 }
 .wr-tic .pr-gr-1 {
   grid-column-start: 4 ;
@@ -2779,7 +2784,12 @@ body {
 }
 .fx2 {
   grid-template-rows: repeat(3, 30px);
-  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+}
+@media (max-width: 959px) {
+  .fx2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
 }
 .name-mp-gr p {
   color: #FF4612;
@@ -2788,6 +2798,12 @@ body {
 }
 .b23 {
   width: 104px;
+  margin-left: -24px;
+}
+@media (max-width: 959px) {
+  .b23 {
+    margin-left: 0px;
+  }
 }
 .btn-tic-buy {
   padding: 5px 50px;
@@ -2838,8 +2854,10 @@ body {
     margin-top: 100px;
   }
 }
-.fx2 {
-  margin-top: 0;
+@media (max-width: 960px) {
+  .fx2 {
+    margin-top: 70px;
+  }
 }
 .loader {
   position: fixed;
